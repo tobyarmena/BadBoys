@@ -25,7 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 100
+            <string>path = path_add();
+sethp = 200
+hp= sethp;
+hpcheck = sethp;
+hpmax = sethp;
+attention = false;
+timer = 1;
+action = 2;
+attacked = false;
+t = 0;
+increment = degtorad(10);
+amplitude = 30;
+xx = x
+yy = y
 </string>
           </argument>
         </arguments>
@@ -50,6 +63,7 @@
             <kind>1</kind>
             <string>if hp&lt;0
 instance_destroy()
+
 </string>
           </argument>
         </arguments>
@@ -132,7 +146,7 @@ instance_destroy()
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>5</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>5</PhysicsObjectAngularDamping>
+  <PhysicsObjectAngularDamping>6</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>

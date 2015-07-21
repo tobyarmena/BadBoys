@@ -36,6 +36,8 @@ body3 = instance_create(x,y+128,obj_centipart);
 body4 = instance_create(x,y+160,obj_centipart);
 physics_joint_revolute_create(body2,body3,x,y+96,0,0,0,0,0,0,0);
 physics_joint_revolute_create(body3,body4,x,y+128,0,0,0,0,0,0,0);
+centiend = instance_create(x,y+192,obj_centiend);
+physics_joint_revolute_create(body4,centiend,x,y+160,0,0,0,0,0,0,0);
 instance_destroy();
 </string>
           </argument>
