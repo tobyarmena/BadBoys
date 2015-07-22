@@ -16,11 +16,11 @@ if keyboard_check_pressed(vk_space) && delay = false
 
 if candash>0 && candash%3==0
     {
-    scr_spritetoparticle(obj_skull)
-    scr_spritetoparticle(obj_body)
-    scr_spritetoparticle(obj_leftarm)
-    scr_spritetoparticle(obj_rightarm)
-    scr_spritetoparticle(obj_legs)
+    scr_spritetoparticle(obj_skull,c_green)
+    scr_spritetoparticle(obj_body,c_green)
+    scr_spritetoparticle(obj_leftarm,c_green)
+    scr_spritetoparticle(obj_rightarm,c_green)
+    scr_spritetoparticle(obj_legs,c_green)
     }
     
 candash -=1

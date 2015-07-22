@@ -16,6 +16,7 @@
         <sprite>sprites\spr_normal_skull</sprite>
         <sprite>sprites\spr_normal_arm</sprite>
         <sprite>sprites\spr_normal_legs</sprite>
+        <sprite>sprites\spr_wind_legs</sprite>
         <sprite>sprites\spr_dash_legs</sprite>
       </sprites>
       <sprites name="spells">
@@ -63,6 +64,7 @@
       <sprite>sprites\spr_wisp_pu</sprite>
       <sprite>sprites\spr_scythe_pu</sprite>
       <sprite>sprites\spr_dash_pu</sprite>
+      <sprite>sprites\spr_wind_pu</sprite>
     </sprites>
     <sprites name="particles">
       <sprite>sprites\spr_magma_part</sprite>
@@ -71,6 +73,7 @@
     </sprites>
     <sprites name="enemy">
       <sprite>sprites\spr_enemy</sprite>
+      <sprite>sprites\spr_enemy2</sprite>
       <sprite>sprites\spr_bull</sprite>
       <sprite>sprites\spr_weeping</sprite>
       <sprite>sprites\spr_enemyranged</sprite>
@@ -134,6 +137,7 @@
     <sprite>sprites\spr_dust_pt</sprite>
     <sprite>sprites\spr_gasCan</sprite>
     <sprite>sprites\spr_gas</sprite>
+    <sprite>sprites\spr_windparticle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -174,6 +178,7 @@
     </scripts>
     <scripts name="Enemy AI">
       <script>scripts\scr_follow.gml</script>
+      <script>scripts\scr_follow_zigged.gml</script>
       <script>scripts\scr_wander.gml</script>
       <script>scripts\scr_enemyshoot.gml</script>
       <script>scripts\scr_enemyshoot2.gml</script>
@@ -282,6 +287,7 @@
       <object>objects\obj_minigun_pu</object>
       <object>objects\obj_scythe_pu</object>
       <object>objects\obj_dash_pu</object>
+      <object>objects\obj_wind_pu</object>
       <object>objects\obj_ice_pu</object>
       <object>objects\obj_wisp_pu</object>
       <object>objects\obj_skull_marked_pu</object>
@@ -305,6 +311,7 @@
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
+      <object>objects\obj_enemy2</object>
       <object>objects\obj_bull</object>
       <object>objects\obj_beetlemom</object>
       <object>objects\obj_beetlemom2</object>

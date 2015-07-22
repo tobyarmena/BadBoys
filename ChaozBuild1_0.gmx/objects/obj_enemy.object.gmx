@@ -38,6 +38,8 @@ attacked = false;
 charging = false;
 stamina = 60;
 value=3;
+change=1
+increase=0
 </string>
           </argument>
         </arguments>
