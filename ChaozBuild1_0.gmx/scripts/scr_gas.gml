@@ -20,10 +20,12 @@ projectile=instance_create(xx,yy,obj_gasCan)
 with(projectile)
     {
     point_direction(x,y,xx,yy)
-    ldx = lengthdir_x(150,ind.aimdir)
-    ldy = lengthdir_y(150,ind.aimdir)
+    ldx = lengthdir_x(1000,ind.aimdir)
+    ldy = lengthdir_y(1000,ind.aimdir)
     physics_apply_impulse(x,y,ldx,ldy)
     }
 
 }
 if knockback<0{knockback+=2}
+
+

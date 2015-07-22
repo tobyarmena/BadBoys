@@ -30,6 +30,7 @@
         <sprite>sprites\spr_ice_pro</sprite>
         <sprite>sprites\spr_wisp_arm</sprite>
         <sprite>sprites\spr_wisp</sprite>
+        <sprite>sprites\spr_gas_arm</sprite>
       </sprites>
       <sprites name="cores">
         <sprite>sprites\spr_core1</sprite>
@@ -47,7 +48,6 @@
       <sprite>sprites\spr_corridor</sprite>
     </sprites>
     <sprites name="inventory">
-      <sprite>sprites\spr_legslot</sprite>
       <sprite>sprites\spr_coreslot</sprite>
       <sprite>sprites\spr_spellslot</sprite>
       <sprite>sprites\spr_skullslot</sprite>
@@ -65,6 +65,8 @@
       <sprite>sprites\spr_scythe_pu</sprite>
       <sprite>sprites\spr_dash_pu</sprite>
       <sprite>sprites\spr_wind_pu</sprite>
+      <sprite>sprites\spr_gas_pu</sprite>
+      <sprite>sprites\spr_legslot</sprite>
     </sprites>
     <sprites name="particles">
       <sprite>sprites\spr_magma_part</sprite>
@@ -217,6 +219,7 @@
     <script>scripts\scr_dash.gml</script>
     <script>scripts\scr_spritetoparticle.gml</script>
     <script>scripts\scr_windwalk.gml</script>
+    <script>scripts\scr_gas.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
@@ -289,6 +292,7 @@
       <object>objects\obj_dash_pu</object>
       <object>objects\obj_wind_pu</object>
       <object>objects\obj_ice_pu</object>
+      <object>objects\obj_gas_pu</object>
       <object>objects\obj_wisp_pu</object>
       <object>objects\obj_skull_marked_pu</object>
       <object>objects\obj_skull_eye_pu</object>
@@ -301,6 +305,7 @@
       <object>objects\obj_minigun_pro</object>
       <object>objects\obj_wisp_pro</object>
       <object>objects\par_pro</object>
+      <object>objects\obj_gasCan</object>
     </objects>
     <objects name="Lighting">
       <object>objects\obj_lightingControl</object>
@@ -387,7 +392,6 @@
     </objects>
     <object>objects\obj_melee</object>
     <object>objects\obj_dreamorb</object>
-    <object>objects\obj_gasCan</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>

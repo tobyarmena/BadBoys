@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>par_pro</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>spin = false
 phy_fixed_rotation = 1
+target=instance_create(mouse_x,mouse_y,obj_target)
 
 
 </string>
@@ -74,7 +75,7 @@ phy_fixed_rotation = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_particles_create(global.gas_sys,x,y,global.gas_pt,20)
+            <string>effect_create_above(ef_explosion,x,y,2,c_green)
 
 alarm[1] = 10
 </string>
@@ -99,13 +100,14 @@ alarm[1] = 10
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if floor(phy_linear_velocity_x) &lt; 10 &amp;&amp; floor(phy_linear_velocity_y) &lt; 10 &amp;&amp; spin = false
-{
-spin = true
-alarm [1] = 10
-alarm[2] = 360
-}
+            <string>closetotarget= distance_to_object(target)&lt;30
+if (phy_speed&lt;10||closetotarget) &amp;&amp; spin = false
+    {
+    phy_linear_damping=100
+    spin = true
+    alarm [1] = 10
+    alarm[2] = 90
+    }
 
 if spin = true
 phy_rotation +=25

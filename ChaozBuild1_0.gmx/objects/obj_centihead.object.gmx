@@ -98,7 +98,7 @@ if hp &lt; hpmax{
 if attention = true
     {
     scr_follow(obj_player,0,6000);
-    scr_sinemov(obj_player);    
+    scr_follow_zigged(obj_player,0,9000);    
     }
     
 //kills enemy when hp is 0

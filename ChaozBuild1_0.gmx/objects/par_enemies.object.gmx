@@ -80,17 +80,16 @@ if hp &lt;= 0
     scr_droporbs(value,x,y,0,360)
     }
 
-if distance_to_object(obj_gasCan) &lt; 200 
-{
-   if posion = false
-   posion = true
-   else if posion = true &amp;&amp; tick = 0
-   {
-   scr_deal_damage(5)
-   tick = 10
-   }
-
-}
+if distance_to_object(obj_gasCan) &lt; 300 
+    {
+    if posion = false
+        posion = true
+    else if posion = true &amp;&amp; tick = 0
+        {
+        scr_deal_damage(10)
+        tick = 10
+        }
+    }
 
 if posion = true &amp;&amp; tick &gt; 0
 tick -= 1
