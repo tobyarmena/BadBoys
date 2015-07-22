@@ -177,6 +177,13 @@ global.items[9,3] = ""
 global.items[9,4] = spr_dash_pu
 global.items[9,5] = scr_dash
 
+//Gas Arm
+global.items[10,0] = "Gas Arm"  
+global.items[10,1] = 1             
+global.items[10,2] = spr_gas_arm
+global.items[10,3] = ""           
+global.items[10,4] = spr_gas_pu
+global.items[10,5] = scr_gas
 </string>
           </argument>
         </arguments>

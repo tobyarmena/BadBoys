@@ -20,6 +20,7 @@
       </sprites>
       <sprites name="spells">
         <sprite>sprites\spr_magma_arm</sprite>
+        <sprite>sprites\spr_gas_arm</sprite>
         <sprite>sprites\spr_magma_pro</sprite>
         <sprite>sprites\spr_magma2_part</sprite>
         <sprite>sprites\spr_minigun_arm</sprite>
@@ -55,6 +56,7 @@
       <sprite>sprites\spr_inventory</sprite>
       <sprite>sprites\spr_magma_pu</sprite>
       <sprite>sprites\spr_minigun_pu</sprite>
+      <sprite>sprites\spr_gas_pu</sprite>
       <sprite>sprites\spr_ice_pu</sprite>
       <sprite>sprites\spr_skull_marked_pu</sprite>
       <sprite>sprites\spr_skull_eye_pu</sprite>
@@ -149,6 +151,7 @@
       <script>scripts\scr_minigun.gml</script>
       <script>scripts\scr_ice.gml</script>
       <script>scripts\scr_magma.gml</script>
+      <script>scripts\scr_gas.gml</script>
       <script>scripts\scr_wisp.gml</script>
       <script>scripts\scr_scythe.gml</script>
     </scripts>
@@ -281,6 +284,7 @@
       <object>objects\obj_deleteslot</object>
       <object>objects\obj_magma_pu</object>
       <object>objects\obj_minigun_pu</object>
+      <object>objects\obj_gas_pu</object>
       <object>objects\obj_scythe_pu</object>
       <object>objects\obj_dash_pu</object>
       <object>objects\obj_ice_pu</object>
