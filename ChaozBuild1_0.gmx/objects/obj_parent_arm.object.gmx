@@ -83,7 +83,8 @@ openingchest = false;
           <argument>
             <kind>1</kind>
             <string>//Set the sprite of each arm to the spell equipped
-sprite_index = global.inventory[index,2]
+if sprite_index != global.inventory[index,2]
+    sprite_index = global.inventory[index,2]
 //If there is no item, set the sprite to the default sprite
 if sprite_index = spr_empty{sprite_index=spr_normal_arm}
 

@@ -159,6 +159,7 @@
       <script>scripts\scr_magma.gml</script>
       <script>scripts\scr_wisp.gml</script>
       <script>scripts\scr_scythe.gml</script>
+      <script>scripts\scr_gas.gml</script>
     </scripts>
     <scripts name="lighting">
       <script>scripts\lsys_init.gml</script>
@@ -221,7 +222,6 @@
     <script>scripts\scr_dash.gml</script>
     <script>scripts\scr_spritetoparticle.gml</script>
     <script>scripts\scr_windwalk.gml</script>
-    <script>scripts\scr_gas.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>

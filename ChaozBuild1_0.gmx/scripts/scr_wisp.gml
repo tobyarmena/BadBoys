@@ -1,3 +1,5 @@
+image_speed = 0.3
+
 //variables for positioning 
 var xx,yy,ind;
 if button = mb_left{ind = obj_leftarm}

@@ -16,6 +16,7 @@ yy = y + lengthdir_y(15,ind.aimdir)
 shot_dir=point_direction(x,y,xx,yy)
 
 //shoot projectile
+
 projectile=instance_create(xx,yy,obj_gasCan)
 with(projectile)
     {
