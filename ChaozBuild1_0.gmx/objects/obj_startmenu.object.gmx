@@ -59,7 +59,7 @@ global.menupage = "main"
           <argument>
             <kind>1</kind>
             <string>if transitioning == true
-    alpha = clamp(alpha + (fade*0.02),0,1)
+    alpha = clamp(alpha + (fade*0.05),0,1)
 
 if(alpha==1)
     {

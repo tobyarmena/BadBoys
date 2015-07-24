@@ -27,5 +27,3 @@ with(projectile)
 
 }
 if knockback<0{knockback+=2}
-
-

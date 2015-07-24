@@ -140,6 +140,7 @@
     <sprite>sprites\spr_gasCan</sprite>
     <sprite>sprites\spr_gas</sprite>
     <sprite>sprites\spr_windparticle</sprite>
+    <sprite>sprites\spr_doll</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -148,6 +149,7 @@
     <background>background\background3</background>
     <background>background\background4</background>
     <background>background\Cover</background>
+    <background>background\bg_mapspitesheet1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

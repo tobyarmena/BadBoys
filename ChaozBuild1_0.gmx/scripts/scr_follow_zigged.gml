@@ -29,7 +29,7 @@ var vdir = point_direction(x, y, dir_x, dir_y);
 
 
 if(collision_line(x,y,argument0.x,argument0.y,obj_parent_wall,false,true))
-    scr_turn(mdir,10)
+    scr_turn(vdir,10)
 else
     scr_turn(point_direction(x,y,argument0.x,argument0.y)+increase,10)
 

@@ -5,8 +5,15 @@ h_space = 4
 v_offset = -height*(block_size+v_space)
 h_offset = -width*(block_size+h_space)
 
+
+    
 room_x =  view_xview[0]+view_wview[0]
 room_y =  view_yview[0]+view_hview[0] 
+if global.paused==true
+    {
+    room_x -= view_xview[0]
+    room_y -= view_yview[0]
+    }  
 
 sprite_size=20 
 sprite_size2=22 
