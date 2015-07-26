@@ -32,6 +32,8 @@ delay=false
 
 //for scripts
 candash=0
+
+stamina=0
 </string>
           </argument>
         </arguments>

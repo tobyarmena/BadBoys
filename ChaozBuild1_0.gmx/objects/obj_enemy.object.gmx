@@ -135,7 +135,7 @@ if attention = true
         {
         charging = false
         image_blend = c_white
-        scr_follow(obj_player,0,4000);
+        scr_follow(obj_player,0,3000);
         }
     }
 else

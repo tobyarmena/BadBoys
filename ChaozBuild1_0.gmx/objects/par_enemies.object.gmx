@@ -72,7 +72,7 @@ if hp != hpcheck
         }
     hpcheck = hp
     }
-    
+   
 //kills enemy when hp is 0
 if hp &lt;= 0
     {

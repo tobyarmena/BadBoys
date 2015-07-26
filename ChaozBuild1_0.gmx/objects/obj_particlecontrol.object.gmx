@@ -128,6 +128,18 @@ part_type_alpha2(global.wisp_pt,0.1,0)
 part_type_size(global.wisp_pt,2,2,-0.15,0)
 part_type_life(global.wisp_pt,20,25)
 
+//wisp collide
+
+global.wisp2_sys = part_system_create();
+global.wisp2_pt = part_type_create();
+
+part_type_sprite(global.wisp2_pt,spr_wisp_pt,true,true,false)
+part_type_direction(global.wisp2_pt,0,360,0,0)
+part_type_speed(global.wisp2_pt,1,2,-0.02,0)
+part_type_life(global.wisp2_pt,20,25)
+part_type_size(global.wisp2_pt,1,1,-0.04,0)
+part_type_orientation(global.wisp2_pt,0,360,0,0,true)
+
 //smoke particle
 global.gas_sys = part_system_create();
 global.gas_pt = part_type_create();

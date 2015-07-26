@@ -24,6 +24,9 @@ with(projectile)
     ldx = lengthdir_x(1000,ind.aimdir)
     ldy = lengthdir_y(1000,ind.aimdir)
     physics_apply_impulse(x,y,ldx,ldy)
+    repeat(3)
+        part_particles_create(global.gas_sys,x+irandom_range(-16,16),y+irandom_range(-16,16),global.gas_pt,1)
+    
     }
 
 }

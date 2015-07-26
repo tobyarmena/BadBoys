@@ -90,7 +90,9 @@ if distance_to_object(obj_player)&gt;3000{instance_destroy();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>part_particles_create(global.wisp2_sys,phy_collision_x,phy_collision_y,global.wisp2_sys,15)
+
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -113,8 +115,8 @@ if distance_to_object(obj_player)&gt;3000{instance_destroy();}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_particles_create(global.magma2_sys,phy_collision_x,phy_collision_y,global.magma2_sys,15)
-part_particles_create(global.magma_sys,phy_collision_x,phy_collision_y,global.magma_pt,30)
+            <string>part_particles_create(global.wisp2_sys,phy_collision_x,phy_collision_y,global.wisp2_sys,15)
+
 
 
 
