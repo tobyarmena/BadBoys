@@ -75,9 +75,8 @@ target=instance_create(mouse_x,mouse_y,obj_target)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>effect_create_above(ef_explosion,x+irandom_range(-60,60),y+irandom_range(-60,60),2,c_green)
-
-alarm[1] = 10
+            <string>part_particles_create(global.gas_sys,x+irandom_range(-64,64),y+irandom_range(-64,64),global.gas_sys,1)
+alarm[1] = 2
 </string>
           </argument>
         </arguments>

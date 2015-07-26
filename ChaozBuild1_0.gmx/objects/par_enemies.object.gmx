@@ -87,6 +87,7 @@ if distance_to_object(obj_gasCan) &lt; 300
     else if posion = true &amp;&amp; tick = 0
         {
         scr_deal_damage(10)
+        part_particles_create(global.gas_sys,x,y,global.gas_pt,1)
         tick = 10
         }
     }

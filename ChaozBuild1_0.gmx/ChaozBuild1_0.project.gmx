@@ -141,6 +141,7 @@
     <sprite>sprites\spr_gas</sprite>
     <sprite>sprites\spr_windparticle</sprite>
     <sprite>sprites\spr_doll</sprite>
+    <sprite>sprites\spr_gas_pt</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
