@@ -83,7 +83,7 @@ if place_meeting(x,y,obj_player) =1
 alarm[0]= 70
 }
 else
-alarm[1] = 10
+alarm[1] = 40
 
 </string>
           </argument>
@@ -118,7 +118,7 @@ if image_index = 0
 if pulse == true 
 {
 image_index = 1
-alarm[0] = 30
+alarm[0] = 26
 pulse = false
 }
 
