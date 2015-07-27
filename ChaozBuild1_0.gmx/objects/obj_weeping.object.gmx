@@ -87,11 +87,27 @@ attacked = false;
             <string>event_inherited()
 
 //Movement
-checkdir = point_direction(x,y,obj_player.x,obj_player.y);
-checkdirp = obj_player.direction
-if abs(checkdir - checkdirp) &lt; 90  &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,true)
+var facingDir = obj_player.direction;
+var targetDir = point_direction(obj_player.x,obj_player.y,x,y);
+
+var facingMinusTarget = facingDir - targetDir;
+angleDiff = facingMinusTarget;
+
+
+if(abs(facingMinusTarget) &gt; 180)
 {
-scr_follow(obj_player,0,6000);
+    if(facingDir &gt; targetDir)
+    {
+        angleDiff = -1 * ((360 - facingDir) + targetDir);
+    }
+    else
+    {
+        angleDiff = (360 - targetDir) + facingDir;
+    }
+}
+if abs(angleDiff)&gt;30
+{
+scr_follow(obj_player,0,15000);
 }    
 
     
@@ -198,7 +214,7 @@ with(obj_player)
     ldx = lengthdir_x(900,point_direction(other.x,other.y,x,y))
     ldy = lengthdir_y(900,point_direction(other.x,other.y,x,y))
     physics_apply_impulse(x,y,ldx,ldy)
-    lives -= 10
+    lives -= 20
     }
 }
 </string>
@@ -214,7 +230,7 @@ with(obj_player)
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>10</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>10</PhysicsObjectAngularDamping>
+  <PhysicsObjectAngularDamping>100</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
