@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>path = path_add();
-sethp = 50
+sethp = 50*global.scale
 hp= sethp;
 hpcheck = sethp;
 hpmax = sethp;
@@ -87,7 +87,7 @@ attacked = false;
             <string>event_inherited()
 
 //Movement
-scr_follow(obj_player,0,3000);
+scr_follow(obj_player,0,600);
 
     
 
@@ -212,7 +212,7 @@ instance_destroy();
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>10</PhysicsObjectLinearDamping>
+  <PhysicsObjectLinearDamping>5</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>100</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>

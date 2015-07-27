@@ -479,7 +479,7 @@ if (instance_number(obj_enemyspawn1)&gt;=amountspawned)
         ypos = instance_find(obj_enemyspawn1,randomspawner).y
         
         //choose a random enemy
-        enemy = choose(obj_enemy,obj_enemy,obj_enemy2,obj_enemy2,obj_enemyranged2,obj_enemyranged3,obj_bull,obj_weeping)
+        enemy = choose(obj_enemy,obj_enemy,obj_enemy2,obj_enemy2,obj_enemyranged2,obj_enemyranged3,obj_bull,obj_weeping,obj_beetlemom2)
         
         //check if there isnt already an enemy in the position
         if (instance_position(xpos,ypos,par_enemies)==noone)

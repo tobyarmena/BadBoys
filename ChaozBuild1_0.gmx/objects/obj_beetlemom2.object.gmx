@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>path = path_add();
-sethp = 200
+sethp = 200*global.scale
 hp= sethp;
 hpcheck = sethp;
 hpmax = sethp;
@@ -40,6 +40,8 @@ hiveplace = true;
 move=true
 target = instance_create(x,y,obj_target)
 value=9;
+spawn=false;
+alarm[1]=irandom_range(60,90)
 
 event_inherited()
 </string>
@@ -65,6 +67,7 @@ event_inherited()
           <argument>
             <kind>1</kind>
             <string>spawn = true;
+alarm[1]=irandom_range(300,600)
 </string>
           </argument>
         </arguments>
@@ -123,62 +126,52 @@ if hp &lt; hpmax{
 
 //move enemy based on above
 
-if attention = true 
-    {
-    failsafe=0
-    while (move==true&amp;&amp;failsafe&lt;=500)
-        {
-        failsafe++
-        dist = irandom_range(100,900)
-        xx = obj_player.x+lengthdir_x(dist,random(360))
-        yy = obj_player.y+lengthdir_y(dist,random(360))
-        if collision_line(xx,yy,obj_player.x,obj_player.y,obj_parent_wall,false,true)&amp;&amp;!collision_circle(xx,yy,0,obj_parent_wall,false,true)
-            {
-            target.x = xx
-            target.y = yy
-            move = false
-            }
-        }
-    if distance_to_object(target)&lt;300 &amp;&amp; !collision_line(xx,yy,obj_player.x,obj_player.y,obj_parent_wall,false,true)
-        {
-        move=true
-        }
-    if failsafe&gt;500
-        {
-        scr_wander(4000)
-        }
-    else
-        {
-        scr_follow(target,64,15000)
-        }
-    } 
+scr_wander(4000)
 
 //hive place
 if  spawn = true 
     {
     spawn = false;
-    alarm[1] = 300;
-    beetle1=instance_create(x+64,y,obj_beetle);
-    beetle2=instance_create(x-64,y,obj_beetle);
-    beetle3=instance_create(x,y+64,obj_beetle);
-    beetle4=instance_create(x,y-64,obj_beetle);
-
-    with(beetle1)
+    
+    if !collision_line(x,y,x+64,y,obj_wall,false,true)
         {
-        physics_apply_impulse(x,y,3000,0)
+        beetle1=instance_create(x+64,y,obj_beetle);
+        with(beetle1)
+            {
+            physics_apply_impulse(x,y,200,0)
+            }
         }
-    with(beetle2)
+    if !collision_line(x,y,x-64,y,obj_wall,false,true)
         {
-        physics_apply_impulse(x,y,-3000,0)
+        beetle2=instance_create(x-64,y,obj_beetle);
+        with(beetle2)
+            {
+            physics_apply_impulse(x,y,-200,0)
+            }
         }
-    with(beetle3)
+    if global.scale&gt;=2
         {
-        physics_apply_impulse(x,y,0,3000)
+        if !collision_line(x,y,x,y+64,obj_wall,false,true)
+            {
+            beetle3=instance_create(x,y+64,obj_beetle);
+            with(beetle3)
+                {
+                physics_apply_impulse(x,y,0,200)
+                }
+            }
         }
-    with(beetle4)
+    if global.scale&gt;=3
         {
-        physics_apply_impulse(x,y,0,-3000)
+        if !collision_line(x,y,x-64,y,obj_wall,false,true)
+            {
+            beetle4=instance_create(x,y-64,obj_beetle);
+            with(beetle4)
+                {
+                physics_apply_impulse(x,y,0,-200)
+                }
+            }
         }
+        
 }
 </string>
           </argument>

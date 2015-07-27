@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>path = path_add();
-sethp = 400
+sethp = 400*global.scale
 hp= sethp;
 hpcheck = sethp;
 hpmax = sethp;
@@ -194,10 +194,10 @@ if attention = true
     {
     if state = 1
         {
-        scr_wander(20000);
+        scr_wander(5000);
         if !alarm [1]
             {
-            alarm [1] = 300;
+            alarm [1] = irandom_range(100,170);
         }
         }
     if state = 2

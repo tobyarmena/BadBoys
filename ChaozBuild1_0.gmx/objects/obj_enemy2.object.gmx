@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 path = path_add();
-sethp = 200
+sethp = 200*global.scale
 hp= sethp;
 hpcheck = sethp;
 hpmax = sethp;
