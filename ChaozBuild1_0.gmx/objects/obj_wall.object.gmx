@@ -95,7 +95,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>//draw_self();
 </string>
           </argument>
         </arguments>

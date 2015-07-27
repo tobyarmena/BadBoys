@@ -398,6 +398,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
+    <room>rooms\room_template</room>
     <rooms name="Dungeon 0">
       <room>rooms\room_start_0</room>
       <room>rooms\room_boss_0</room>
