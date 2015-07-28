@@ -192,6 +192,14 @@ global.items[11,2] = spr_wind_legs
 global.items[11,3] = ""           
 global.items[11,4] = spr_wind_pu
 global.items[11,5] = scr_windwalk
+
+//Kazi
+global.items[12,0] = "The Kazi"  
+global.items[12,1] = 1             
+global.items[12,2] = spr_wisp_arm
+global.items[12,3] = ""           
+global.items[12,4] = spr_kazi_pu
+global.items[12,5] = scr_kazi
 </string>
           </argument>
         </arguments>

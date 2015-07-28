@@ -126,7 +126,7 @@ if hp &lt; hpmax{
 
 //move enemy based on above
 
-scr_wander(4000)
+scr_wander(7000)
 
 //hive place
 if  spawn = true 

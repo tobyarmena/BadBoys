@@ -30,6 +30,9 @@
         <sprite>sprites\spr_ice_pro</sprite>
         <sprite>sprites\spr_wisp_arm</sprite>
         <sprite>sprites\spr_wisp</sprite>
+        <sprite>sprites\spr_kazi</sprite>
+        <sprite>sprites\spr_gas</sprite>
+        <sprite>sprites\spr_gasCan</sprite>
         <sprite>sprites\spr_gas_arm</sprite>
       </sprites>
       <sprites name="cores">
@@ -62,6 +65,7 @@
       <sprite>sprites\spr_skull_hell_pu</sprite>
       <sprite>sprites\spr_skull_broken_pu</sprite>
       <sprite>sprites\spr_wisp_pu</sprite>
+      <sprite>sprites\spr_kazi_pu</sprite>
       <sprite>sprites\spr_scythe_pu</sprite>
       <sprite>sprites\spr_dash_pu</sprite>
       <sprite>sprites\spr_wind_pu</sprite>
@@ -71,6 +75,10 @@
     <sprites name="particles">
       <sprite>sprites\spr_magma_part</sprite>
       <sprite>sprites\spr_ice_part</sprite>
+      <sprite>sprites\spr_wisp_pt</sprite>
+      <sprite>sprites\spr_gas_pt</sprite>
+      <sprite>sprites\spr_windparticle</sprite>
+      <sprite>sprites\spr_dust_pt</sprite>
       <sprite>sprites\spr_ice_part2</sprite>
     </sprites>
     <sprites name="enemy">
@@ -86,6 +94,7 @@
       <sprite>sprites\spr_beetle</sprite>
       <sprite>sprites\spr_centihead</sprite>
       <sprite>sprites\spr_centipede</sprite>
+      <sprite>sprites\spr_doll</sprite>
       <sprite>sprites\spr_hive</sprite>
     </sprites>
     <sprites name="Room">
@@ -104,14 +113,17 @@
       </sprites>
       <sprite>sprites\spr_wall</sprite>
     </sprites>
-    <sprite>sprites\spr_wisp_pt</sprite>
+    <sprites name="Dungeon">
+      <sprite>sprites\spr_spike</sprite>
+      <sprite>sprites\spr_chestcover</sprite>
+      <sprite>sprites\spr_turret</sprite>
+    </sprites>
     <sprite>sprites\spr_rndspwn</sprite>
     <sprite>sprites\spr_empty</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_mouse</sprite>
     <sprite>sprites\spr_chestbase</sprite>
     <sprite>sprites\spr_randchestspawn</sprite>
-    <sprite>sprites\spr_chestcover</sprite>
     <sprite>sprites\spr_menu</sprite>
     <sprite>sprites\spr_resume</sprite>
     <sprite>sprites\spr_exit</sprite>
@@ -127,21 +139,11 @@
     <sprite>sprites\spr_1920x1200</sprite>
     <sprite>sprites\spr_fullscreen</sprite>
     <sprite>sprites\spr_start</sprite>
-    <sprites name="Dungeon">
-      <sprite>sprites\spr_spike</sprite>
-      <sprite>sprites\spr_turret</sprite>
-    </sprites>
     <sprite>sprites\spr_pointer</sprite>
     <sprite>sprites\spr_barrel</sprite>
     <sprite>sprites\spr_explo</sprite>
     <sprite>sprites\spr_scythe_arm</sprite>
     <sprite>sprites\spr_dreamorb</sprite>
-    <sprite>sprites\spr_dust_pt</sprite>
-    <sprite>sprites\spr_gasCan</sprite>
-    <sprite>sprites\spr_gas</sprite>
-    <sprite>sprites\spr_windparticle</sprite>
-    <sprite>sprites\spr_doll</sprite>
-    <sprite>sprites\spr_gas_pt</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -159,6 +161,7 @@
       <script>scripts\scr_ice.gml</script>
       <script>scripts\scr_magma.gml</script>
       <script>scripts\scr_wisp.gml</script>
+      <script>scripts\scr_kazi.gml</script>
       <script>scripts\scr_scythe.gml</script>
       <script>scripts\scr_gas.gml</script>
     </scripts>
@@ -297,6 +300,7 @@
       <object>objects\obj_ice_pu</object>
       <object>objects\obj_gas_pu</object>
       <object>objects\obj_wisp_pu</object>
+      <object>objects\obj_kazi_pu</object>
       <object>objects\obj_skull_marked_pu</object>
       <object>objects\obj_skull_eye_pu</object>
       <object>objects\obj_skull_hell_pu</object>
@@ -307,8 +311,10 @@
       <object>objects\obj_ice_pro</object>
       <object>objects\obj_minigun_pro</object>
       <object>objects\obj_wisp_pro</object>
+      <object>objects\obj_kazi_pro</object>
       <object>objects\par_pro</object>
       <object>objects\obj_gasCan</object>
+      <object>objects\obj_kazi_ex</object>
     </objects>
     <objects name="Lighting">
       <object>objects\obj_lightingControl</object>
