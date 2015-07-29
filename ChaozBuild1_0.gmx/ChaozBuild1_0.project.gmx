@@ -34,6 +34,8 @@
         <sprite>sprites\spr_gas</sprite>
         <sprite>sprites\spr_gasCan</sprite>
         <sprite>sprites\spr_gas_arm</sprite>
+        <sprite>sprites\spr_vortex_arm</sprite>
+        <sprite>sprites\spr_vortex_pro</sprite>
       </sprites>
       <sprites name="cores">
         <sprite>sprites\spr_core1</sprite>
@@ -58,6 +60,7 @@
       <sprite>sprites\spr_slot</sprite>
       <sprite>sprites\spr_inventory</sprite>
       <sprite>sprites\spr_magma_pu</sprite>
+      <sprite>sprites\spr_vortex_pu</sprite>
       <sprite>sprites\spr_minigun_pu</sprite>
       <sprite>sprites\spr_ice_pu</sprite>
       <sprite>sprites\spr_skull_marked_pu</sprite>
@@ -164,6 +167,7 @@
       <script>scripts\scr_kazi.gml</script>
       <script>scripts\scr_scythe.gml</script>
       <script>scripts\scr_gas.gml</script>
+      <script>scripts\scr_vortex.gml</script>
     </scripts>
     <scripts name="lighting">
       <script>scripts\lsys_init.gml</script>
@@ -301,6 +305,7 @@
       <object>objects\obj_gas_pu</object>
       <object>objects\obj_wisp_pu</object>
       <object>objects\obj_kazi_pu</object>
+      <object>objects\obj_vortex</object>
       <object>objects\obj_skull_marked_pu</object>
       <object>objects\obj_skull_eye_pu</object>
       <object>objects\obj_skull_hell_pu</object>
@@ -314,6 +319,7 @@
       <object>objects\obj_kazi_pro</object>
       <object>objects\par_pro</object>
       <object>objects\obj_gasCan</object>
+      <object>objects\obj_vortext_pro</object>
       <object>objects\obj_kazi_ex</object>
     </objects>
     <objects name="Lighting">

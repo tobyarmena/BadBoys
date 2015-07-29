@@ -200,6 +200,14 @@ global.items[12,2] = spr_wisp_arm
 global.items[12,3] = ""           
 global.items[12,4] = spr_kazi_pu
 global.items[12,5] = scr_kazi
+
+//Vortex 
+global.items[13,0] = "Vortex"  
+global.items[13,1] = 1             
+global.items[13,2] = spr_vortex_arm
+global.items[13,3] = ""           
+global.items[13,4] = spr_vortex_pu
+global.items[13,5] = scr_vortex
 </string>
           </argument>
         </arguments>
