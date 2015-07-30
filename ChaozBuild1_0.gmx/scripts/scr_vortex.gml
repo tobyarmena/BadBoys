@@ -23,7 +23,7 @@ with(projectile)
     point_direction(x,y,xx,yy)
     ldx = lengthdir_x(10000,ind.aimdir)
     ldy = lengthdir_y(10000,ind.aimdir)
-    physics_apply_impulse(x,y,ldx,ldy)
+    physics_apply_force(x,y,ldx,ldy)
 
     }
 

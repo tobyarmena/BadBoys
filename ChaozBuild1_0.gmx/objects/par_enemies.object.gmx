@@ -110,7 +110,10 @@ if distance_to_object(obj_vortext_pro) &lt; 300
     physics_apply_impulse(x,y,-(x- obj_vortext_pro.x)*2,-(y - obj_vortext_pro.y)*2)
     vtick = 20
     }
-}    
+} 
+if distance_to_object(obj_vortext_pro) &lt; 50
+hp -= 5
+   
 </string>
           </argument>
         </arguments>

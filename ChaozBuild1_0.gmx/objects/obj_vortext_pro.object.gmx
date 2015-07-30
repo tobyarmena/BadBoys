@@ -25,9 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 120
-
-target=instance_create(mouse_x,mouse_y,obj_target)
+            <string>target=instance_create(mouse_x,mouse_y,obj_target)
+phy_fixed_rotation = 1
 </string>
           </argument>
         </arguments>
@@ -101,14 +100,16 @@ target=instance_create(mouse_x,mouse_y,obj_target)
 closetotarget= distance_to_object(target) = 0
 if (closetotarget)
     {
-    phy_linear_damping=100
     }
+    
+if phy_speed_x == 0 and phy_speed_y == 0 and alarm[1] = 0 
+alarm[1] = 120
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="par_enemies">
+    <event eventtype="4" ename="obj_parent_wall">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -125,8 +126,9 @@ if (closetotarget)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(par_enemies)
-hp -= 5
+            <string>phy_linear_damping = 100
+
+alarm[0] = 120
 </string>
           </argument>
         </arguments>
@@ -146,6 +148,6 @@ hp -= 5
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>128,128</point>
-    <point>48,64</point>
+    <point>64,64</point>
   </PhysicsShapePoints>
 </object>
