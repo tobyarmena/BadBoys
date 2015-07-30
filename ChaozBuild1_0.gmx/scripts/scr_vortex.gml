@@ -1,4 +1,4 @@
-if mouse_check_button(button) && delay = false && instance_number(obj_vortext_pro ) < 2
+if mouse_check_button(button) && delay = false && instance_number(obj_vortex_pro ) < 2
 {
 //control delay
 delay=true
@@ -8,24 +8,21 @@ alarm[0]=20
 knockback = -10
 
 //variables for positioning 
-var xx,yy,ind;
-if button = mb_left{ind = obj_leftarm}
-else if button = mb_right{ind = obj_rightarm}
-xx = x + lengthdir_x(15,ind.aimdir)
-yy = y + lengthdir_y(15,ind.aimdir)
-shot_dir=point_direction(x,y,xx,yy)
+if abs(obj_player.x - mouse_x) < 450
+xx = mouse_x
+else if abs(obj_player.x - mouse_x) > 450 and(obj_player.x - mouse_x) > 0
+xx = obj_player.x - 450
+else if abs(obj_player.x - mouse_x) > 450 and(obj_player.x - mouse_x) < 0
+xx = obj_player.x + 450
 
-//shoot projectile
+if abs(obj_player.y - mouse_y) < 450
+yy = mouse_y
+else if abs(obj_player.y - mouse_y) > 450 and(obj_player.y - mouse_y) > 0
+yy  = obj_player.y - 450
+else if abs(obj_player.y - mouse_y) > 450 and(obj_player.y - mouse_y) < 0
+yy  = obj_player.y + 450
 
-projectile=instance_create(xx,yy,obj_vortext_pro)
-with(projectile)
-    {
-    point_direction(x,y,xx,yy)
-    ldx = lengthdir_x(10000,ind.aimdir)
-    ldy = lengthdir_y(10000,ind.aimdir)
-    physics_apply_force(x,y,ldx,ldy)
-
-    }
+instance_create(xx,yy,obj_vortex_pro )
 
 }
 if knockback<0{knockback+=2}

@@ -101,18 +101,18 @@ if distance_to_object(obj_kazi_ex) &lt; 300
     scr_deal_damage(50);
     }
 
-if distance_to_object(obj_vortext_pro) &lt; 300
+if distance_to_object(obj_vortex_pro) &lt; 200
 {
     vtick -= 1
-    physics_apply_impulse(x,y,-(x- obj_vortext_pro.x)/8,-(y - obj_vortext_pro.y)/8)
+    physics_apply_impulse(x,y,-(x- obj_vortex_pro.x)/8,-(y - obj_vortex_pro.y)/8)
     if vtick = 0
     {
-    physics_apply_impulse(x,y,-(x- obj_vortext_pro.x)*2,-(y - obj_vortext_pro.y)*2)
+    physics_apply_impulse(x,y,-(x- obj_vortex_pro.x)*2,-(y - obj_vortex_pro.y)*2)
     vtick = 20
     }
 } 
-if distance_to_object(obj_vortext_pro) &lt; 50
-hp -= 5
+
+
    
 </string>
           </argument>

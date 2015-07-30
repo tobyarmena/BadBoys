@@ -324,7 +324,7 @@
       <object>objects\obj_wave_pro</object>
       <object>objects\par_pro</object>
       <object>objects\obj_gasCan</object>
-      <object>objects\obj_vortext_pro</object>
+      <object>objects\obj_vortex_pro</object>
       <object>objects\obj_kazi_ex</object>
     </objects>
     <objects name="Lighting">
