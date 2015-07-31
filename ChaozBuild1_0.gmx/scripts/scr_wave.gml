@@ -19,11 +19,22 @@ if mouse_check_button(button)&& delay=false
     with(projectile)
         {
         phy_bullet = true;
-        direction = ind.aimdir;
+        
         ldx = lengthdir_x(5000,ind.aimdir)
         ldy = lengthdir_y(5000,ind.aimdir)
         physics_apply_impulse(x,y,ldx,ldy)
+        
+        direction = ind.aimdir;
         defaultdir=ind.aimdir
+        
+        if ind = obj_leftarm
+            {
+            amplitude = 64;
+            }
+        if ind = obj_rightarm
+            {
+            amplitude = -64;
+            }
         }
     
     }

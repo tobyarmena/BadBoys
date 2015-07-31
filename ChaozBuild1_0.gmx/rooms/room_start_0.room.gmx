@@ -57,11 +57,11 @@
     <instance objName="obj_dash_pu" x="2816" y="2912" name="inst_3DA01751" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wind_pu" x="2880" y="2912" name="inst_C31A2110" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_magma_pu" x="3296" y="2752" name="inst_BD7FE8A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_minigun_pu" x="3232" y="2816" name="inst_D082AF3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_scythe_pu" x="3200" y="2752" name="inst_6BDF5738" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ice_pu" x="3328" y="2816" name="inst_260FBF3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_gas_pu" x="3296" y="2912" name="inst_F74CF5B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wisp_pu" x="3392" y="2880" name="inst_F52FF40F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_minigun_pu" x="3296" y="2880" name="inst_D082AF3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_scythe_pu" x="3424" y="2816" name="inst_6BDF5738" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ice_pu" x="3296" y="2816" name="inst_260FBF3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_gas_pu" x="3360" y="2816" name="inst_F74CF5B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wisp_pu" x="3360" y="2880" name="inst_F52FF40F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_skull_marked_pu" x="3360" y="2368" name="inst_9C802BEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_skull_eye_pu" x="3264" y="2368" name="inst_9E5D3634" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_skull_hell_pu" x="3296" y="2464" name="inst_BA4E326C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -146,10 +146,10 @@
     <instance objName="obj_doorRight1" x="3616" y="2560" name="inst_93DDFF88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doorDown1" x="3072" y="3136" name="inst_AA828047" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doorDown2" x="3072" y="3136" name="inst_038D43E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_missle_pu" x="3456" y="2816" name="inst_5BEF9B77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_vortex" x="3392" y="2752" name="inst_6FAC07B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_vortex" x="3232" y="3008" name="inst_6A490698" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wave_pu" x="3520" y="2912" name="inst_1F812A85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_missle_pu" x="3424" y="2752" name="inst_5BEF9B77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vortex" x="3360" y="2752" name="inst_6FAC07B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wave_pu" x="3520" y="2752" name="inst_1F812A85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wave_pu" x="3584" y="2752" name="inst_C25B38F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_mapspitesheet1" x="2496" y="2560" w="64" h="64" xo="0" yo="0" id="10001217" name="inst_2860A76C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
