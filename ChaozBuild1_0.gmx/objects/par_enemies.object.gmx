@@ -108,6 +108,7 @@ if distance_to_object(obj_vortex_pro) &lt; 200
     if vtick = 0
     {
     physics_apply_impulse(x,y,-(x- obj_vortex_pro.x)*2,-(y - obj_vortex_pro.y)*2)
+    hp -= 5
     vtick = 20
     }
 } 

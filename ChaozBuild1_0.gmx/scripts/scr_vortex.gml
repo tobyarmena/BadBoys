@@ -1,4 +1,4 @@
-if mouse_check_button(button) && delay = false && instance_number(obj_vortex_pro ) < 2
+if mouse_check_button(button) && delay = false && instance_number(obj_vortex_pro ) < 2 && place_meeting(mouse_x,mouse_y,obj_parent_wall) = 0 
 {
 //control delay
 delay=true
