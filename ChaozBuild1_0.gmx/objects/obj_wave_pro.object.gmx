@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mindmg = 20
-maxdmg = 40
+            <string>mindmg = 50
+maxdmg = 70
 sdirection = direction;
 path = path_add();
 //image_blend=c_red

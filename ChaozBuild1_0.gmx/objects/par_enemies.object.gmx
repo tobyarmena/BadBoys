@@ -101,17 +101,7 @@ if distance_to_object(obj_kazi_ex) &lt; 300
     scr_deal_damage(50);
     }
 
-if distance_to_object(obj_vortex_pro) &lt; 200
-{
-    vtick -= 1
-    physics_apply_force(x,y,-(x- obj_vortex_pro.x)*50,-(y - obj_vortex_pro.y)*50)
-    if vtick = 0
-    {
-    physics_apply_impulse(x,y,-(x- obj_vortex_pro.x)*3,-(y - obj_vortex_pro.y)*3)
-    hp -= 10
-    vtick = 20
-    }
-} 
+
 
 
    

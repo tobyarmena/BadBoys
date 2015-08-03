@@ -87,7 +87,7 @@ attacked = false;
             <string>event_inherited()
 
 //Movement
-scr_follow(obj_player,0,2000);
+scr_follow(obj_player,0,500);
 
     
 
