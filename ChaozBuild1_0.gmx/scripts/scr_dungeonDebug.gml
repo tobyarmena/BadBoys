@@ -25,8 +25,10 @@ room_y =  view_yview[0]+view_hview[0]
 
 draw_set_alpha(1)
 draw_set_font(fnt_inventory)
-draw_set_color(c_white)
-draw_rectangle(room_x+h_offset,room_y+v_offset,room_x,room_y,true)
+draw_set_color(c_black)
+draw_set_alpha(0.3)
+draw_rectangle(room_x+h_offset,room_y+v_offset,room_x,room_y,false)
+draw_set_alpha(1)
 
 for(i=0;i<width;i++)
     for(j=0;j<height;j++)
