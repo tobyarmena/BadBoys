@@ -158,6 +158,15 @@ part_type_sprite(global.wind_pt,spr_windparticle,false,false,false)
 part_type_alpha3(global.wind_pt,0,0.3,0)
 part_type_life(global.wind_pt,20,25)
 
+//water particle
+global.water_sys = part_system_create();
+global.water_pt = part_type_create();
+part_system_depth(global.water_sys,-100);
+part_type_sprite(global.water_pt,spr_water_pt,false,false,true)
+part_type_alpha2(global.water_pt,0.5,0)
+part_type_life(global.water_pt,30,40)
+part_type_size(global.water_pt,1.5,2,-0.01,0.1)
+part_type_orientation(global.water_pt,0,360,2,1,false)
 
 
 

@@ -212,7 +212,7 @@ global.items[13,5] = scr_vortex
 //Wave
 global.items[14,0] = "The Wave"  
 global.items[14,1] = 1             
-global.items[14,2] = spr_wisp_arm
+global.items[14,2] = spr_water_arm
 global.items[14,3] = ""           
 global.items[14,4] = spr_wave_pu
 global.items[14,5] = scr_wave

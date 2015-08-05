@@ -21,6 +21,7 @@
       </sprites>
       <sprites name="spells">
         <sprite>sprites\spr_magma_arm</sprite>
+        <sprite>sprites\spr_water_arm</sprite>
         <sprite>sprites\spr_magma_pro</sprite>
         <sprite>sprites\spr_magma2_part</sprite>
         <sprite>sprites\spr_minigun_arm</sprite>
@@ -149,6 +150,9 @@
     <sprite>sprites\spr_barrel</sprite>
     <sprite>sprites\spr_explo</sprite>
     <sprite>sprites\spr_dreamorb</sprite>
+    <sprite>sprites\sprite117</sprite>
+    <sprite>sprites\spr_water_pro</sprite>
+    <sprite>sprites\spr_water_pt</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
