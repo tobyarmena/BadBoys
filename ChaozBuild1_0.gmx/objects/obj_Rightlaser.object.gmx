@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,10 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_line_width_colour(obj_rightarm.x,obj_rightarm.y,x,y,5,c_blue,c_blue)
+            <string>if mouse_check_button(mb_left)
+{
+draw_line_width_colour(obj_rightarm.x,obj_rightarm.y,x,y,5,c_blue,c_blue)
 draw_set_alpha(0.5)
 draw_line_width_colour(obj_rightarm.x,obj_rightarm.y,x,y,10,c_blue,c_blue)
-
+}
 
 </string>
           </argument>

@@ -1,4 +1,4 @@
-acc = 2
+acc = 16
 len = 1000
 
 var ind;
@@ -10,6 +10,9 @@ global.dis = i
 
 if !instance_exists(obj_Rightlaser)
 instance_create(x+lengthdir_x(global.dis,ind.aimdir),y+lengthdir_y(global.dis,ind.aimdir),obj_Rightlaser)
+if mouse_check_button_released(mb_left) && instance_exists(obj_Rightlaser)
+with (obj_Rightlaser)
+instance_destroy()
 
 if instance_exists(obj_Leftlaser)
     with(obj_Leftlaser)
