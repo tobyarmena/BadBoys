@@ -151,6 +151,7 @@
     <instance objName="obj_wave_pu" x="3520" y="2752" name="inst_1F812A85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wave_pu" x="3584" y="2752" name="inst_C25B38F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_vortex" x="2688" y="2304" name="inst_4E9F2B88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_laser_pu" x="2752" y="2304" name="inst_6114B955" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_mapspitesheet1" x="2496" y="2560" w="64" h="64" xo="0" yo="0" id="10001217" name="inst_2860A76C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

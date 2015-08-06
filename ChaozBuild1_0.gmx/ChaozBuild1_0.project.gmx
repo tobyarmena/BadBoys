@@ -21,6 +21,7 @@
       </sprites>
       <sprites name="spells">
         <sprite>sprites\spr_magma_arm</sprite>
+        <sprite>sprites\spr_laser_arm</sprite>
         <sprite>sprites\spr_water_arm</sprite>
         <sprite>sprites\spr_magma_pro</sprite>
         <sprite>sprites\spr_magma2_part</sprite>
@@ -65,6 +66,7 @@
       <sprite>sprites\spr_magma_pu</sprite>
       <sprite>sprites\spr_vortex_pu</sprite>
       <sprite>sprites\spr_minigun_pu</sprite>
+      <sprite>sprites\spr_laser_pu</sprite>
       <sprite>sprites\spr_ice_pu</sprite>
       <sprite>sprites\spr_skull_marked_pu</sprite>
       <sprite>sprites\spr_skull_eye_pu</sprite>
@@ -175,6 +177,7 @@
       <script>scripts\scr_scythe.gml</script>
       <script>scripts\scr_gas.gml</script>
       <script>scripts\scr_vortex.gml</script>
+      <script>scripts\scr_laser.gml</script>
     </scripts>
     <scripts name="lighting">
       <script>scripts\lsys_init.gml</script>
@@ -314,6 +317,7 @@
       <object>objects\obj_missle_pu</object>
       <object>objects\obj_wave_pu</object>
       <object>objects\obj_vortex</object>
+      <object>objects\obj_laser_pu</object>
       <object>objects\obj_skull_marked_pu</object>
       <object>objects\obj_skull_eye_pu</object>
       <object>objects\obj_skull_hell_pu</object>
@@ -416,6 +420,8 @@
     </objects>
     <object>objects\obj_melee</object>
     <object>objects\obj_dreamorb</object>
+    <object>objects\obj_Leftlaser</object>
+    <object>objects\obj_Rightlaser</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
