@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>collected = false;
+
 //phy_rotation=random(360);
 
 </string>
@@ -50,7 +51,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var selected = instance_nearest(obj_player.x,obj_player.y,obj_parent_select);
+            <string>selected = instance_nearest(obj_player.x,obj_player.y,obj_parent_select);
 image_blend = c_white;
 
 
@@ -58,7 +59,7 @@ if distance_to_object(obj_player)&lt;32
     {
     with(selected)
         {
-        image_blend = c_yellow;
+        //image_blend = c_yellow;
         if keyboard_check_pressed(ord('E'))&amp;&amp; global.full=false
             {
             collected = true;
@@ -81,6 +82,66 @@ if collected = true
 
 
    
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(selected)
+    {
+    if distance_to_object(obj_player)&lt;32 &amp;&amp; collected == false
+        {
+        
+        //show_message("work")
+        draw_set_halign(fa_center)
+        draw_set_valign(fa_top)
+        xx = x + 21
+        yy = y + 42
+        draw_set_font(fnt_item)
+        draw_set_colour(c_white)
+        draw_text(xx,yy,global.items[item_index,0])
+        
+        xxx=xx-string_width(global.items[item_index,0])/2
+        yyy=yy+string_height(global.items[item_index,0])/2
+        draw_set_colour(c_black)
+        draw_set_alpha(0.5)
+        draw_rectangle(xxx,yy,xxx+string_width(global.items[item_index,0]),yy+string_height(global.items[item_index,0]),false)
+        draw_set_alpha(1)
+        draw_set_color(c_white)
+        
+        draw_sprite_ext(sprite_index,image_index,x-2,y,
+        image_xscale,image_yscale,image_angle,c_black,0.5)
+        draw_sprite_ext(sprite_index,image_index,x+2,y,image_xscale,
+        image_yscale,image_angle,c_black,0.5)
+        draw_sprite_ext(sprite_index,image_index,x,y-2,image_xscale,
+        image_yscale,image_angle,c_black,0.5)
+        draw_sprite_ext(sprite_index,image_index,x,y+2,image_xscale,
+        image_yscale,image_angle,c_black,0.5)
+        draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,
+        image_yscale,image_angle,image_blend,1)
+        
+        
+        }
+    }
+
+    
 </string>
           </argument>
         </arguments>
