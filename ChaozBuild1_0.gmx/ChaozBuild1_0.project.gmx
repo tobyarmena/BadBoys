@@ -40,10 +40,13 @@
       </sprites>
       <sprites name="spells">
         <sprite>sprites\spr_magma_arm</sprite>
+        <sprite>sprites\spr_boulder__arm</sprite>
         <sprite>sprites\spr_laser_arm</sprite>
         <sprite>sprites\spr_water_arm</sprite>
         <sprite>sprites\spr_magma_pro</sprite>
         <sprite>sprites\spr_magma2_part</sprite>
+        <sprite>sprites\spr_boulder_pro</sprite>
+        <sprite>sprites\spr_miniboulder_pro</sprite>
         <sprite>sprites\spr_minigun_arm</sprite>
         <sprite>sprites\spr_minigun_part</sprite>
         <sprite>sprites\spr_minigun_pro</sprite>
