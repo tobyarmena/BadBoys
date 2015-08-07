@@ -177,6 +177,7 @@
     <sprite>sprites\sprite117</sprite>
     <sprite>sprites\spr_water_pro</sprite>
     <sprite>sprites\spr_water_pt</sprite>
+    <sprite>sprites\spr_killspree_core_pu</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -262,6 +263,7 @@
     <script>scripts\scr_dash.gml</script>
     <script>scripts\scr_spritetoparticle.gml</script>
     <script>scripts\scr_windwalk.gml</script>
+    <script>scripts\scr_core_killspree.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
@@ -341,6 +343,7 @@
       <object>objects\obj_wave_pu</object>
       <object>objects\obj_vortex</object>
       <object>objects\obj_laser_pu</object>
+      <object>objects\obj_killspree_pu</object>
       <object>objects\obj_skull_marked_pu</object>
       <object>objects\obj_skull_eye_pu</object>
       <object>objects\obj_skull_hell_pu</object>

@@ -8,6 +8,72 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//events for kill multiplier core
+enemycount = instance_number(par_enemies)
+count = enemycount
+global.killspree = 1
+display = global.killspree
+time = 0
+xs = 1
+ys = 1
+ptfrequency = 10
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Perform effect of the item by calling it's script
+script_execute(global.inventory[28,5])
+
+if global.inventory[28,2]==spr_empty
+    {
+    image_blend = c_yellow
+    }
+else
+    image_blend = global.inventory[28,2]
+    
+//reset any variables
+if global.inventory[28,0]!="Frenzy"
+    global.killspree = 1
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -35,6 +101,13 @@ if global.paused == true
     y = y-view_yview[0];
     }
 draw_self();
+
+//killspree event
+/*
+draw_set_colour(c_red)
+draw_set_font(fnt_inventory)
+draw_text_transformed(x,y+64,display,xs,ys,0)
+*/
 </string>
           </argument>
         </arguments>

@@ -1,1 +1,1 @@
-other.hp -= floor(argument0*global.skulldmg*global.tdmg);
+other.hp -= floor(argument0*global.skulldmg*global.tdmg*global.killspree);
