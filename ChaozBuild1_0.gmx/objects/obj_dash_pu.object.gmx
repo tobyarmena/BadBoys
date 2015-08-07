@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>item_index = 9
+price = 4000
 event_inherited();
 </string>
           </argument>

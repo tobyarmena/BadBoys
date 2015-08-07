@@ -178,6 +178,7 @@
     <sprite>sprites\spr_water_pro</sprite>
     <sprite>sprites\spr_water_pt</sprite>
     <sprite>sprites\spr_killspree_core_pu</sprite>
+    <sprite>sprites\spr_weaponstore</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -264,6 +265,7 @@
     <script>scripts\scr_spritetoparticle.gml</script>
     <script>scripts\scr_windwalk.gml</script>
     <script>scripts\scr_core_killspree.gml</script>
+    <script>scripts\scr_calculatedamage.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
@@ -443,6 +445,7 @@
         <object>objects\obj_BarrelExplo</object>
         <object>objects\obj_explo</object>
       </objects>
+      <object>objects\obj_shopgen_spells</object>
     </objects>
     <object>objects\obj_melee</object>
     <object>objects\obj_dreamorb</object>
@@ -461,7 +464,8 @@
       <room>rooms\room_0_6</room>
       <room>rooms\room_0_7</room>
       <room>rooms\room_0_8</room>
-      <room>rooms\room_0_9</room>
+      <room>rooms\room_0_shop</room>
+      <room>rooms\room_0_11</room>
       <room>rooms\room_0_10</room>
     </rooms>
     <rooms name="Dungeon 1">

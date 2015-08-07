@@ -4,7 +4,7 @@ image_blend = c_red
 enemycount = instance_number(par_enemies)
 if count > enemycount
     {
-    global.killspree += 0.2
+    global.killspree = min(global.killspree+0.2,5)
     ptfrequency = max(ptfrequency-1,1)
     time = 300
     count = enemycount

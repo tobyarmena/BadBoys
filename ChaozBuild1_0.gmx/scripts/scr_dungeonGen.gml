@@ -88,7 +88,7 @@ while(i<=amount&&j<=amount*4)
         if i>=amount
             ds_grid_set(global.map,nextx,nexty,2)
         else
-            ds_grid_set(global.map,nextx,nexty,choose(4,5,6,7,8,3,9,10))
+            ds_grid_set(global.map,nextx,nexty,choose(3,4,5,6,7,8,3,9,10,11))
         ds_grid_set(global.mpath,nextx,nexty,i+2)
         
         mopen=choose(0,0,0,1)
@@ -131,7 +131,7 @@ while(i<=amount&&j<=amount*4)
                     if k>=amountbranch
                         ds_grid_set(global.map,nextx,nexty,9)
                     else
-                        ds_grid_set(global.map,nextx,nexty,choose(3,4,5,6,7,8,9,10))
+                        ds_grid_set(global.map,nextx,nexty,choose(3,4,5,6,7,8,9,10,11))
                     ds_grid_set(global.mpath,nextx,nexty,i+2+k)
                     
                     mopen=choose(0,0,0,1)
