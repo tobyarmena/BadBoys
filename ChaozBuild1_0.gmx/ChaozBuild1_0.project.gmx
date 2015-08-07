@@ -113,7 +113,7 @@
       <sprite>sprites\spr_ice_part2</sprite>
     </sprites>
     <sprites name="enemy">
-      <sprite>sprites\spr_enemy</sprite>
+      <sprite>sprites\spr_vanishboss</sprite>
       <sprite>sprites\spr_enemy2</sprite>
       <sprite>sprites\spr_bull</sprite>
       <sprite>sprites\spr_weeping</sprite>
@@ -381,6 +381,7 @@
       <object>objects\obj_beetle</object>
       <object>objects\obj_weeping</object>
       <object>objects\obj_enemyranged3</object>
+      <object>objects\obj_vanishboss</object>
       <object>objects\obj_enemyranged2</object>
       <object>objects\par_enemies</object>
       <object>objects\obj_enemyproj</object>
