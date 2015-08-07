@@ -179,6 +179,7 @@
     <sprite>sprites\spr_water_pt</sprite>
     <sprite>sprites\spr_killspree_core_pu</sprite>
     <sprite>sprites\spr_weaponstore</sprite>
+    <sprite>sprites\spr_grimreaper</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -372,6 +373,7 @@
     </objects>
     <objects name="enemies">
       <object>objects\obj_enemy</object>
+      <object>objects\obj_grimreaper</object>
       <object>objects\obj_enemy2</object>
       <object>objects\obj_bull</object>
       <object>objects\obj_beetlemom</object>
