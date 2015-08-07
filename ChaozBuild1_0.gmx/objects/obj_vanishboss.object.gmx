@@ -64,7 +64,7 @@ event_inherited()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move=true
+            <string>vanish = false;
 </string>
           </argument>
         </arguments>
