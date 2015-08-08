@@ -180,6 +180,7 @@
     <sprite>sprites\spr_killspree_core_pu</sprite>
     <sprite>sprites\spr_weaponstore</sprite>
     <sprite>sprites\spr_grimreaper</sprite>
+    <sprite>sprites\damaged</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -454,6 +455,7 @@
     <object>objects\obj_dreamorb</object>
     <object>objects\obj_Leftlaser</object>
     <object>objects\obj_Rightlaser</object>
+    <object>objects\obj_damagescreen</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
