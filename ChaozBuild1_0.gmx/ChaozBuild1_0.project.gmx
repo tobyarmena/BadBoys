@@ -209,6 +209,7 @@
     </scripts>
     <scripts name="Enemy AI">
       <script>scripts\scr_follow.gml</script>
+      <script>scripts\scr_follow64.gml</script>
       <script>scripts\scr_follow_zigged.gml</script>
       <script>scripts\scr_wander.gml</script>
       <script>scripts\scr_enemyshoot.gml</script>

@@ -50,7 +50,7 @@ alpha = 0
           <argument>
             <kind>1</kind>
             <string>alpha = max(alpha-0.05,0)
-if livecheck != lives
+if livecheck &gt; lives
     {
     livecheck = lives
     alpha = 1

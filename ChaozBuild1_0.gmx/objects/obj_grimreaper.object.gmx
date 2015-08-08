@@ -143,7 +143,7 @@ stamina = 60;
 
 if state==0
     {
-    scr_follow(obj_player,0,11000)
+    scr_follow64(obj_player,0,11000)
     image_speed = 0.2
     if image_index = 4
         {
