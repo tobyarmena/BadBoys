@@ -40,6 +40,10 @@ move = true
 failsafe=0
 value=4;
 vanish = false;
+canshoot = true;
+
+px = x
+py = y
 
 event_inherited()
 </string>
@@ -65,6 +69,7 @@ event_inherited()
           <argument>
             <kind>1</kind>
             <string>vanish = false;
+
 </string>
           </argument>
         </arguments>
@@ -88,6 +93,8 @@ event_inherited()
           <argument>
             <kind>1</kind>
             <string>vanish = true;
+px = phy_position_x
+py = phy_position_y
 </string>
           </argument>
         </arguments>
@@ -111,26 +118,32 @@ event_inherited()
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-
+scr_turn(point_direction(x,y,obj_player.x,obj_player.y),10);
 
 
 //move enemy based on above
 if attention = true 
     {
     if vanish = false
-        visible = true;
+    {
         if !alarm[0] 
             {
             alarm [0] = 90;
             }
+        phy_position_x = px;
+        phy_position_y = py;
+        }
     if vanish = true
         {
         if !alarm[1]
             {
             alarm[1] = 90;
             }
-        self.visible = false;
+        phy_position_x = 0;
+        phy_position_y = 0;
+    
         }
+
     }
 </string>
           </argument>
