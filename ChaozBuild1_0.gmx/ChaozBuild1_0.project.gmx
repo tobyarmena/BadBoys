@@ -253,6 +253,8 @@
     <script>scripts\scr_windwalk.gml</script>
     <script>scripts\scr_core_killspree.gml</script>
     <script>scripts\scr_calculatedamage.gml</script>
+    <script>scripts\scr_applyforce.gml</script>
+    <script>scripts\scr_applyimpulse.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
@@ -444,6 +446,7 @@
     <object>objects\obj_Rightlaser</object>
     <object>objects\obj_Leftlaser</object>
     <object>objects\obj_damagescreen</object>
+    <object>objects\obj_parent_playerwall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>

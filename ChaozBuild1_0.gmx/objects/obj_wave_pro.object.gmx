@@ -150,6 +150,10 @@ instance_destroy();
 if damage = true
     {
     scr_deal_damage(irandom_range(mindmg,maxdmg));
+    with(other)
+        {
+        scr_applyimpulse(point_direction(obj_player.x,obj_player.y,x,y),1000)
+        }
     damage = false;
     alarm [0] = 30;
     }

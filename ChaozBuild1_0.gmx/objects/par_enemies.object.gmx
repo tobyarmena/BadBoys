@@ -28,6 +28,7 @@
             <string>posion = false
 tick = 10
 vtick = 20
+canhit=true
 </string>
           </argument>
         </arguments>

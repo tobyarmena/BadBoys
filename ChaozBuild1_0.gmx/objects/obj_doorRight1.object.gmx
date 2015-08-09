@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_parent_wall</parentName>
+  <parentName>obj_parent_playerwall</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -55,7 +55,7 @@ if global.spawn = "right"
             <kind>1</kind>
             <string>if global.spawn = "right" &amp;&amp; instance_exists(par_enemies)
     {
-    if distance_to_object(obj_player)&gt;32
+    if distance_to_object(obj_player)&gt;32&amp;&amp; distance_to_object(obj_companion)&gt;32
         close=true
     else
         close=false

@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>path = path_add();
-sethp = 300*global.scale
+sethp = 2000*global.scale
 hp= sethp;
 hpcheck = sethp;
 hpmax = sethp;
