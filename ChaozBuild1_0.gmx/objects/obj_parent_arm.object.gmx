@@ -32,6 +32,7 @@ image_speed = 0.3
 spd = 0;
 aimdir = 0;
 damage = 0;
+global.control=1
 
 //chest
 openingchest = false;
@@ -93,14 +94,33 @@ if global.action = 1
     {
     
     //Point arms to crosshairs when shift is held down
-    if keyboard_check(vk_shift) &amp;&amp; obj_player.mouse_dis = true
-        {
-        aimdir = point_direction(x,y,mouse_x,mouse_y);
-        }
-    else
-        {
+    
+    if global.control==1
+    {
+        if keyboard_check(vk_shift) || !obj_player.mouse_dis = true
+            {
+            aimdir = obj_player.direction;
+            }
+        else
+            {
+            aimdir = point_direction(x,y,mouse_x,mouse_y);
+            }
+    }
+    else if global.control==2
+    {
+        if keyboard_check(vk_shift) &amp;&amp; obj_player.mouse_dis = true
+            {
+            aimdir = point_direction(x,y,mouse_x,mouse_y);
+            }
+        else
+            {
+            aimdir = obj_player.direction;
+            }
+    }
+    
+    if global.inventory[index,0] == ""
         aimdir = obj_player.direction;
-        }
+        
     //Perform the spell script based on which spell is equipped
     script_execute(global.inventory[index,5])
 

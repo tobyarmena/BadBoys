@@ -396,6 +396,7 @@
         <object>objects\obj_fullscreen</object>
         <object>objects\obj_r1024x768</object>
         <object>objects\obj_r1280x960</object>
+        <object>objects\obj_shiftcontrol</object>
       </objects>
       <object>objects\obj_pointer</object>
     </objects>

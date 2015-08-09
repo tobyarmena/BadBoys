@@ -7,21 +7,31 @@ h_offset = -width*(block_size+h_space)
 
 
     
-room_x =  view_xview[0]+view_wview[0]
-room_y =  view_yview[0]+view_hview[0] 
+/*
 if global.paused==true
     {
     room_x -= view_xview[0]
     room_y -= view_yview[0]
-    }  
+    } 
+*/
+if keyboard_check(vk_tab)
+    {
+    room_x =  view_xview[0]+view_wview[0]/2-h_offset/2
+    room_y =  view_yview[0]+view_hview[0]/2-v_offset/2
+    }
+else
+    {
+    room_x =  view_xview[0]+view_wview[0]
+    room_y =  view_yview[0]+view_hview[0] 
+    }
 
 sprite_size=20 
 sprite_size2=22 
 
 draw_set_alpha(1)
 draw_set_font(fnt_inventory)
-room_x =  view_xview[0]+view_wview[0]
-room_y =  view_yview[0]+view_hview[0] 
+//room_x =  view_xview[0]+view_wview[0]
+//room_y =  view_yview[0]+view_hview[0] 
 
 draw_set_alpha(1)
 draw_set_font(fnt_inventory)
