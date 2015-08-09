@@ -1,4 +1,4 @@
-if mouse_check_button(button) && delay = false && instance_number(obj_vortex_pro ) < 2 && place_meeting(mouse_x,mouse_y,obj_parent_wall) = 0 and !collision_line(x,y,mouse_x,mouse_y,obj_parent_wall,true,false)
+if mouse_check_button(button) && delay = false && instance_number(obj_vortex_pro ) < 1 && place_meeting(mouse_x,mouse_y,obj_parent_wall) = 0 and !collision_line(x,y,mouse_x,mouse_y,obj_parent_wall,true,false)
 {
 //control delay
 delay=true
@@ -26,3 +26,7 @@ instance_create(xx,yy,obj_vortex_pro )
 
 }
 if knockback<0{knockback+=2}
+
+if mouse_check_button_released(button)
+with(obj_vortex_pro)
+instance_destroy()

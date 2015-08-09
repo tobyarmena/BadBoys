@@ -163,6 +163,7 @@
     <sprite>sprites\spr_weaponstore</sprite>
     <sprite>sprites\spr_grimreaper</sprite>
     <sprite>sprites\damaged</sprite>
+    <sprite>sprites\spr_laser</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -437,8 +438,8 @@
     </objects>
     <object>objects\obj_melee</object>
     <object>objects\obj_dreamorb</object>
-    <object>objects\obj_Leftlaser</object>
     <object>objects\obj_Rightlaser</object>
+    <object>objects\obj_Leftlaser</object>
     <object>objects\obj_damagescreen</object>
   </objects>
   <rooms name="rooms">
