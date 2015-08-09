@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10000</depth>
+  <depth>-10000000</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,16 +25,52 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
-mp_grid_add_instances(global.grid,obj_parent_wall,1);
-mp_grid_add_instances(global.grid,obj_parent_playerwall,1);
+            <string>exist = false
+roomclear = false
+alpha = 0
+xscale = 1
+yscale = 1
+shown = false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if !instance_exists (par_enemies)
+    roomclear = true
+else
+    roomclear = false
 
-global.grid64 = mp_grid_create(0,0,room_width/64,room_height/64,64,64);
-mp_grid_add_instances(global.grid64,obj_parent_wall,1);
-mp_grid_add_instances(global.grid,obj_parent_playerwall,1);
 
-global.grid2 = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
-mp_grid_add_instances(global.grid2,obj_parent_wall,1);
+
+if roomclear = true &amp;&amp; shown = false &amp;&amp; exist = true
+    {
+    alpha = 1
+    xscale = 1
+    yscale = 1
+    shown = true
+    }
+    
+alpha -= 0.01
+xscale += 0.001
+yscale += 0.001
 
 </string>
           </argument>
@@ -58,17 +94,11 @@ mp_grid_add_instances(global.grid2,obj_parent_wall,1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mp_grid_clear_all(global.grid);
-mp_grid_add_instances(global.grid,obj_parent_wall,1);
-mp_grid_add_instances(global.grid,obj_parent_playerwall,1);
-
-mp_grid_clear_all(global.grid64);
-mp_grid_add_instances(global.grid64,obj_parent_wall,1);
-mp_grid_add_instances(global.grid64,obj_parent_playerwall,1);
-
-mp_grid_clear_all(global.grid2);
-mp_grid_add_instances(global.grid2,obj_parent_wall,1);
-
+            <string>if instance_exists(par_enemies)
+    exist = true
+else
+    exist = false 
+shown = false
 </string>
           </argument>
         </arguments>
@@ -91,10 +121,11 @@ mp_grid_add_instances(global.grid2,obj_parent_wall,1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//draw_set_alpha(0.1)
-//mp_grid_draw(global.grid)
-//draw_set_alpha(1)
+            <string>draw_set_valign(fa_center)
+draw_set_halign(fa_middle)
+draw_set_font(fnt_roomclear)
+draw_set_alpha(alpha)
+draw_text_transformed(view_xview[0]+view_wview[0]/2,view_yview[0]+view_hview[0]/2,"Room Cleared",xscale,yscale,1)
 </string>
           </argument>
         </arguments>

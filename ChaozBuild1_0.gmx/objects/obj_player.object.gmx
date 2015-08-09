@@ -55,6 +55,7 @@ instance_create(x,y,obj_pointer)
 instance_create(x,y,obj_scorecontrol)
 instance_create(0,0,obj_parent_select)
 instance_create(0,0,obj_damagescreen)
+instance_create(0,0,obj_roomclear)
 
 
 

@@ -30,7 +30,65 @@ ef = false;
 attacked = false;
 mode = 0;
 inposition = false
-spd = 8000
+spd = 10000
+allowmode2=true
+timer = 0
+locationx = obj_player.x + random_range(-200,200);
+locationy = obj_player.y + random_range(-200,200);
+alpha = 1
+
+
+//combat behavior
+staminamax = 150
+stamina = staminamax
+attspd = 180
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stamina = staminamax
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>allowmode2 = true
 </string>
           </argument>
         </arguments>
@@ -136,8 +194,83 @@ spd = 8000
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-target = instance_nearest(obj_player.x,obj_player.y,par_enemies)
+            <string>alpha = clamp(alpha+0.02,0,1)
+image_alpha = alpha
+
+closest = instance_nearest(obj_player.x,obj_player.y,par_enemies)
+target = closest
+
+//Go to the player
+if mode == 0
+    {
+    scr_follow2(obj_player,30,spd)
+    timer = 40
+    stamina += 1
+    }
+
+//wander near player
+if mode == 1
+    {
+    scr_wander_companion(spd/2)
+    }
+    
+//attack
+if mode == 2
+    {
+    if instance_exists(par_enemies)
+        scr_follow2_attack(target,0,spd)
+    else
+        mode = 0
+    stamina -= 1
+    if stamina = 0 || distance_to_object(closest)&gt; 500
+        {
+        mode = 0
+        }
+    }
+    
+    
+    
+
+    
+if mode == 0
+    {
+    if distance_to_object(obj_player)&lt;100 
+        {
+        mode = 1
+        locationx = x
+        locationy = y
+        }
+    }
+if mode == 1
+    {
+    with(obj_player)
+        {
+        if distance_to_object(other.closest)&lt;300
+            {
+            with(obj_companion)
+                {
+                if stamina &gt;= staminamax
+                mode = 2
+                }
+            }
+        }
+    if distance_to_object(obj_player)&gt;300 || distance_to_object(spawnpoint1)&lt;100
+        {
+        mode = 0
+        }
+    
+    }
+
+
+//fix when companion gets stuck on the doors
+    
+if distance_to_object(obj_parent_playerwall)&lt;0
+    {
+    scr_moveto(obj_player,10)
+    }
+        
+    
+
 /*
 if mode == 1
     {
@@ -149,7 +282,7 @@ if mode == 1
             with(obj_companion)
                 {
                 patht = instance_create((target.x+obj_player.x)/2,(target.y+obj_player.y)/2,obj_target)
-                scr_follow(patht,0,spd*2)
+                scr_follow2(patht,0,spd*2)
                 if distance_to_object(patht)&lt;30
                     {
                     mode = 2
@@ -161,12 +294,14 @@ if mode == 1
     }
 
 */
+
+/*
 if mode == 0
     {
     with(obj_player)
         {
         target = other.target
-        if distance_to_object(target) &lt; 500
+        if distance_to_object(target) &lt; 300
             {
             obj_companion.mode = 1
             with(obj_companion)
@@ -179,23 +314,35 @@ if mode == 0
     }
 if mode == 1
     {
-    scr_follow(patht,0,spd*1.3)
+    scr_follow2(patht,30,spd*1.3)
     if distance_to_object(patht)&lt;30
         {
-        mode = 2
+        if allowmode2 = true
+            {
+            mode = 2
+            allowmode2 = false
+            alarm[2] = 100
+            }
+        else
+            mode = 0
         }
     }
 
-if mode == 2
+if mode == 2 
     {
-    scr_follow(target,0,spd)
-    if !alarm[1]
-        alarm[1] = 90
+    if instance_exists(par_enemies)
+        {
+        scr_follow2(target,0,spd)
+        if !alarm[1]
+            alarm[1] = 90
+        }
+    else
+        mode = 0
     }
     
 if mode == 0
     {
-    scr_follow(obj_player,32,spd);
+    scr_follow2(obj_player,32,spd);
     }
     
 
@@ -208,7 +355,30 @@ if mode == 0
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_wall">
+    <event eventtype="4" ename="obj_parent_playerwall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//s
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_parent_wall">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -265,30 +435,8 @@ if attacked = false
         hp -= 40
         }
     
+    
     }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_player">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//cows
 </string>
           </argument>
         </arguments>
@@ -314,6 +462,31 @@ if attacked = false
             <string>phy_position_x = 0
 phy_position_y = 0
 inposition = false
+alpha = 0
+phy_rotation = -point_direction(x,y,obj_player.x,obj_player.y)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
 </string>
           </argument>
         </arguments>

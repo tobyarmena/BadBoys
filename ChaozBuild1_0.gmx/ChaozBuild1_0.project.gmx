@@ -214,6 +214,7 @@
       <script>scripts\scr_follow64.gml</script>
       <script>scripts\scr_follow_zigged.gml</script>
       <script>scripts\scr_wander.gml</script>
+      <script>scripts\scr_wander_companion.gml</script>
       <script>scripts\scr_enemyshoot.gml</script>
       <script>scripts\scr_enemyshoot2.gml</script>
       <script>scripts\scr_enemyshoot3.gml</script>
@@ -256,10 +257,16 @@
     <script>scripts\scr_calculatedamage.gml</script>
     <script>scripts\scr_applyforce.gml</script>
     <script>scripts\scr_applyimpulse.gml</script>
+    <script>scripts\scr_moveto.gml</script>
+    <scripts name="Companion AI">
+      <script>scripts\scr_follow2.gml</script>
+      <script>scripts\scr_follow2_attack.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
     <font>fonts\fnt_inventory</font>
+    <font>fonts\fnt_roomclear</font>
     <font>fonts\fnt_item</font>
     <font>fonts\fnt_score</font>
   </fonts>
@@ -448,6 +455,7 @@
     <object>objects\obj_Leftlaser</object>
     <object>objects\obj_damagescreen</object>
     <object>objects\obj_parent_playerwall</object>
+    <object>objects\obj_roomclear</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
