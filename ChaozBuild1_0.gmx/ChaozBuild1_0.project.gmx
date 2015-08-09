@@ -262,11 +262,13 @@
       <script>scripts\scr_follow2.gml</script>
       <script>scripts\scr_follow2_attack.gml</script>
     </scripts>
+    <script>scripts\scr_menus.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
     <font>fonts\fnt_inventory</font>
     <font>fonts\fnt_roomclear</font>
+    <font>fonts\fnt_menu</font>
     <font>fonts\fnt_item</font>
     <font>fonts\fnt_score</font>
   </fonts>
