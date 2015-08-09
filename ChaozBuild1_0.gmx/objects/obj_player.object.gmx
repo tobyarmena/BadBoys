@@ -190,6 +190,8 @@ if distance_to_object(obj_doorLeft)&lt;5
 else
     door_Left = false;
 
+//if distance_to_object(obj_vanish_ex) &lt; 300
+    //lives -= 30;
 
 </string>
           </argument>

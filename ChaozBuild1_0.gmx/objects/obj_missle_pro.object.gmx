@@ -53,7 +53,7 @@ pdir=0
           <argument>
             <kind>1</kind>
             <string>//movement
-if instance_exists(par_enemies)&amp;&amp;distance_to_object(instance_nearest(x,y,par_enemies))&lt;300
+if instance_exists(par_enemies)&amp;&amp;distance_to_object(instance_nearest(x,y,par_enemies))&lt;300  &amp;&amp; par_enemies.visible = true
     {
     scr_follow(instance_nearest(x,y,par_enemies),0,4000);
     defaultdir=pdir

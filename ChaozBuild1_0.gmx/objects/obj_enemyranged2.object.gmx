@@ -93,7 +93,7 @@ scr_wander(4000);
 
 if attacked = false 
     {
-    scr_enemyshoot2(dir);
+    scr_enemyshoot2(dir,obj_enemyproj2);
     attacked = true
     alarm[  0] = 90;
     }

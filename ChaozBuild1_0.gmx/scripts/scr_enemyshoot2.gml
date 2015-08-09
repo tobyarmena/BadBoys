@@ -1,8 +1,8 @@
 //Shooting
-projectile1=instance_create(x,y,obj_enemyproj2) 
-projectile2=instance_create(x,y,obj_enemyproj2) 
-projectile3=instance_create(x,y,obj_enemyproj2) 
-projectile4=instance_create(x,y,obj_enemyproj2) 
+projectile1=instance_create(x,y,argument1) 
+projectile2=instance_create(x,y,argument1) 
+projectile3=instance_create(x,y,argument1) 
+projectile4=instance_create(x,y,argument1) 
 with (projectile1)
     {
     ldx = lengthdir_x(600,argument0)

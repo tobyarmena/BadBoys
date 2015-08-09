@@ -215,6 +215,7 @@
       <script>scripts\scr_wander.gml</script>
       <script>scripts\scr_enemyshoot.gml</script>
       <script>scripts\scr_enemyshoot2.gml</script>
+      <script>scripts\scr_enemyshoot3.gml</script>
       <script>scripts\scr_turn.gml</script>
     </scripts>
     <scripts name="Dungeon">
@@ -347,7 +348,7 @@
       <object>objects\par_pro</object>
       <object>objects\obj_gasCan</object>
       <object>objects\obj_vortex_pro</object>
-      <object>objects\obj_kazi_ex</object>
+      <object>objects\obj_missle_ex</object>
     </objects>
     <objects name="Lighting">
       <object>objects\obj_lightingControl</object>
@@ -372,11 +373,13 @@
       <object>objects\obj_enemyproj</object>
       <object>objects\obj_enemyproj2</object>
       <object>objects\obj_enemyproj3</object>
+      <object>objects\obj_enemyproj4</object>
       <object>objects\obj_enemyspawn1</object>
       <object>objects\obj_hive</object>
       <object>objects\obj_centipart</object>
       <object>objects\obj_centihead</object>
       <object>objects\obj_centiparent</object>
+      <object>objects\obj_vanish_ex</object>
       <object>objects\obj_target</object>
     </objects>
     <objects name="GUI">
