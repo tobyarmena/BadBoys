@@ -164,6 +164,7 @@
     <sprite>sprites\spr_grimreaper</sprite>
     <sprite>sprites\damaged</sprite>
     <sprite>sprites\spr_laser</sprite>
+    <sprite>sprites\sprite131</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

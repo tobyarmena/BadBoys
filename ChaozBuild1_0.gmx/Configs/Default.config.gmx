@@ -303,7 +303,7 @@
     <option_win8_advertising_enable>0</option_win8_advertising_enable>
     <option_win8_advertising_key></option_win8_advertising_key>
     <option_win8_advertising_testing_enable>0</option_win8_advertising_testing_enable>
-    <option_win8_advertising_type></option_win8_advertising_type>
+    <option_win8_advertising_type>MS Advertising</option_win8_advertising_type>
     <option_win8_analytics_enable>0</option_win8_analytics_enable>
     <option_win8_analytics_id></option_win8_analytics_id>
     <option_win8_build_version>0</option_win8_build_version>

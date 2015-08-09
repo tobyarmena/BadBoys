@@ -1,5 +1,5 @@
 acc = 16 //x and y scanned per step
-len = 1000//max length of laser
+len = 1032//max length of laser
 mindmg = 1
 maxdmg = 2
 var ind;
