@@ -400,6 +400,7 @@
         <object>objects\obj_start</object>
         <object>objects\obj_back</object>
         <object>objects\obj_parent_button</object>
+        <object>objects\obj_parent_checkbox</object>
         <object>objects\obj_resume</object>
         <object>objects\obj_exit</object>
       </objects>
@@ -408,8 +409,8 @@
         <object>objects\obj_r1600x1200</object>
         <object>objects\obj_r1280x1024</object>
         <object>objects\obj_r1600x1000</object>
-        <object>objects\obj_r1920x1200</object>
         <object>objects\obj_fullscreen</object>
+        <object>objects\obj_r1920x1200</object>
         <object>objects\obj_r1024x768</object>
         <object>objects\obj_r1280x960</object>
         <object>objects\obj_shiftcontrol</object>

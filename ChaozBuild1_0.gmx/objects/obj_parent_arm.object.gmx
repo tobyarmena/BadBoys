@@ -32,7 +32,7 @@ image_speed = 0.3
 spd = 0;
 aimdir = 0;
 damage = 0;
-global.control=1
+
 
 //chest
 openingchest = false;

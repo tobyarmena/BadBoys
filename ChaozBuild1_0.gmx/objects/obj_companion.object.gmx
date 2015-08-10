@@ -203,6 +203,7 @@ target = closest
 //Go to the player
 if mode == 0
     {
+    if inposition == true
     scr_follow2(obj_player,30,spd)
     timer = 40
     stamina += 1

@@ -34,6 +34,9 @@ global.fullscreen = true
 global.reschange = false
 global.width = 1920
 global.height = 1080
+
+//controls
+global.control = 1
 </string>
           </argument>
         </arguments>

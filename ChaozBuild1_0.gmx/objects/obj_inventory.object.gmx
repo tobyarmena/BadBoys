@@ -125,7 +125,7 @@ global.items[2,5] = scr_ice
 global.items[3,0] = "Marked One"  
 global.items[3,1] = 2             
 global.items[3,2] = spr_skull_marked
-global.items[3,3] = "You have been chosen."         
+global.items[3,3] = "Mark enemies with death. #Concentrating damage to a signal enemy #gives damage bonuses."         
 global.items[3,4] = spr_skull_marked_pu
 global.items[3,5] = scr_skull_marked
 
@@ -133,7 +133,7 @@ global.items[3,5] = scr_skull_marked
 global.items[4,0] = "Watcher"  
 global.items[4,1] = 2             
 global.items[4,2] = spr_skull_eye
-global.items[4,3] = "A third eye is always helpful."            
+global.items[4,3] = "The third eye makes you deadly accurate. #projectile based spells deal increased damage #and have a faster projectile speed, but #you sacrifice fire rate."            
 global.items[4,4] = spr_skull_eye_pu
 global.items[4,5] = scr_skull_eye
 
@@ -149,7 +149,7 @@ global.items[5,5] = scr_skull_hell
 global.items[6,0] = "Broken"  
 global.items[6,1] = 2             
 global.items[6,2] = spr_skull_broken
-global.items[6,3] = "You are no longer ..."           
+global.items[6,3] = "Only one arm is accessible, but #that arm deals triple damage."           
 global.items[6,4] = spr_skull_broken_pu
 global.items[6,5] = scr_skull_broken
 
@@ -157,7 +157,7 @@ global.items[6,5] = scr_skull_broken
 global.items[7,0] = "The Wisp"  
 global.items[7,1] = 1             
 global.items[7,2] = spr_wisp_arm
-global.items[7,3] = "Projectiles follow a guided path"           
+global.items[7,3] = "Fire 3 guided projectiles that  #steer towards enemy direction."           
 global.items[7,4] = spr_wisp_pu
 global.items[7,5] = scr_wisp
 
@@ -165,7 +165,7 @@ global.items[7,5] = scr_wisp
 global.items[8,0] = "Reaper"  
 global.items[8,1] = 1             
 global.items[8,2] = spr_scythe_arm
-global.items[8,3] = ""           
+global.items[8,3] = "Summon a scythe and perform a #melee attack that sucks your enemy's #life force."           
 global.items[8,4] = spr_scythe_pu
 global.items[8,5] = scr_scythe
 
@@ -173,15 +173,15 @@ global.items[8,5] = scr_scythe
 global.items[9,0] = "Agility"  
 global.items[9,1] = 4             
 global.items[9,2] = spr_dash_legs
-global.items[9,3] = ""           
+global.items[9,3] = "You legs are more maneuverable. #Press the spacebar to perform a #dash."           
 global.items[9,4] = spr_dash_pu
 global.items[9,5] = scr_dash
 
-//Triple Icicle Spell
+//Skunker
 global.items[10,0] = "Skunker"  
 global.items[10,1] = 1             
 global.items[10,2] = spr_gas_arm
-global.items[10,3] = ""          
+global.items[10,3] = "Gas you enemies.#Cast a bomb that detonates and #releases a toxic gas."          
 global.items[10,4] = spr_gas_pu
 global.items[10,5] = scr_gas
 
@@ -189,7 +189,7 @@ global.items[10,5] = scr_gas
 global.items[11,0] = "Wind Caller"  
 global.items[11,1] = 4             
 global.items[11,2] = spr_wind_legs
-global.items[11,3] = ""           
+global.items[11,3] = "Run like the wind! #Hold down spacebar to have a short burst #of speed."           
 global.items[11,4] = spr_wind_pu
 global.items[11,5] = scr_windwalk
 
@@ -205,7 +205,7 @@ global.items[12,5] = scr_missle
 global.items[13,0] = "Vortex"  
 global.items[13,1] = 1             
 global.items[13,2] = spr_vortex_arm
-global.items[13,3] = ""           
+global.items[13,3] = "Harness the power of gravity and #keep your enemies at bay, then #destroy them. #Hold down the mouse button to summon #a blackhole and release it to have #it explode."           
 global.items[13,4] = spr_vortex_pu
 global.items[13,5] = scr_vortex
 
@@ -213,7 +213,7 @@ global.items[13,5] = scr_vortex
 global.items[14,0] = "The Wave"  
 global.items[14,1] = 1             
 global.items[14,2] = spr_water_arm
-global.items[14,3] = ""           
+global.items[14,3] = "Cast a water spell that can #penetrate through enemies."           
 global.items[14,4] = spr_wave_pu
 global.items[14,5] = scr_wave
 
@@ -229,7 +229,7 @@ global.items[15,5] = scr_laser
 global.items[16,0] = "Frenzy"  
 global.items[16,1] = 3             
 global.items[16,2] = c_red
-global.items[16,3] = ""           
+global.items[16,3] = "You get a rush from killing. #Killing multiple enemies in a row #gives you serious damage and speed buffs"           
 global.items[16,4] = spr_killspree_core_pu
 global.items[16,5] = scr_core_killspree
 </string>
@@ -665,6 +665,7 @@ if(global.showinv==true)
     }
 else if (global.showinv==false)
     {
+    global.menupage = "null"
     scr_pause()
     
     
