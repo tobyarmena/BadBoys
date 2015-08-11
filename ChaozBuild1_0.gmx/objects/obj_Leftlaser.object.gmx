@@ -29,6 +29,9 @@
 colour = c_yellow
 time = 0
 sub = 0
+
+mindmg = 1
+maxdmg = 2
 </string>
           </argument>
         </arguments>
@@ -58,6 +61,8 @@ sub = time/60 * 4
 else if time/60 = 10
 instance_destroy()
 
+mindmg = 1 + sub/10 
+maxdmg = 2 + sub/10
 
 colour = make_colour_hsv(40-sub,255,255)
 </string>

@@ -29,6 +29,7 @@
 tick = 10
 vtick = 20
 canhit=true
+ltick = 5
 </string>
           </argument>
         </arguments>
