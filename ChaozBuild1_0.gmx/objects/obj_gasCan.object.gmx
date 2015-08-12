@@ -99,7 +99,8 @@ alarm[1] = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>closetotarget= distance_to_object(target)&lt;30
+            <string>event_inherited()
+closetotarget= distance_to_object(target)&lt;30
 if (phy_speed&lt;10||closetotarget) &amp;&amp; spin = false
     {
     phy_linear_damping=100
@@ -110,6 +111,32 @@ if (phy_speed&lt;10||closetotarget) &amp;&amp; spin = false
 
 if spin = true
 phy_rotation +=25
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_parent_playerwall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//gnsk//fasmfkaf
+alarm[1] = 10
+alarm[2] = 360
+spin = true
 </string>
           </argument>
         </arguments>

@@ -455,7 +455,10 @@ ds_grid_set(global.roomVisit,global.playerPos_x,global.playerPos_y,1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>activatedoor=false
+            <string>with(obj_behindDoorWall)
+    phy_active = true
+
+activatedoor=false
 if visited[global.playerPos_x,global.playerPos_y] == false
 {
 visited[global.playerPos_x,global.playerPos_y] = true;

@@ -263,6 +263,7 @@
       <script>scripts\scr_follow2_attack.gml</script>
     </scripts>
     <script>scripts\scr_menus.gml</script>
+    <script>scripts\scr_minmaxdmg.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
@@ -459,6 +460,7 @@
     <object>objects\obj_damagescreen</object>
     <object>objects\obj_parent_playerwall</object>
     <object>objects\obj_roomclear</object>
+    <object>objects\obj_behindDoorWall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>

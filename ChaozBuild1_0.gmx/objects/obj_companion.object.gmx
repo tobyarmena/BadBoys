@@ -432,7 +432,7 @@ if attacked = false
     effect_create_above(ef_ring,phy_collision_x,phy_collision_y,1,c_yellow)
     with(other)
         {
-        scr_applyimpulse(other.dir,4000)
+        scr_applyimpulse(other.dir,8000)
         hp -= 40
         }
     

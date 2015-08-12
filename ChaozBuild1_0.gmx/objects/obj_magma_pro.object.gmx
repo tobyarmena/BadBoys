@@ -51,9 +51,36 @@ maxdmg = 50
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>phy_rotation += phy_speed
+            <string>event_inherited()
+phy_rotation += phy_speed
 part_particles_create(global.magma3_sys,x+irandom_range(-5,5),y+irandom_range(-5,5),global.magma3_pt,10)
 if distance_to_object(obj_player)&gt;3000{instance_destroy();}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_parent_playerwall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>part_particles_create(global.magma2_sys,phy_collision_x,phy_collision_y,global.magma2_sys,15)
+part_particles_create(global.magma_sys,phy_collision_x,phy_collision_y,global.magma_pt,30)
+instance_destroy();
 
 </string>
           </argument>

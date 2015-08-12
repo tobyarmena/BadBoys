@@ -30,6 +30,8 @@ sethp = 400*global.scale
 hp= sethp;
 hpcheck = sethp;
 hpmax = sethp;
+mindmg = 7*global.scale
+maxdmg = mindmg+10
 attention = false;
 timer = 1;
 action = 2;
@@ -334,7 +336,7 @@ else
             <kind>1</kind>
             <string>if attacked = false
 {
-
+lives -= scr_minmaxdmg()
 attacked = true;
 alarm[0] = 90;
 effect_create_above(ef_ring,phy_collision_x,phy_collision_y,1,c_yellow)
@@ -343,7 +345,6 @@ with(obj_player)
     ldx = lengthdir_x(900,point_direction(other.x,other.y,x,y))
     ldy = lengthdir_y(900,point_direction(other.x,other.y,x,y))
     physics_apply_impulse(x,y,ldx,ldy)
-    lives -= 20
     }
 }
 </string>

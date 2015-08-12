@@ -49,9 +49,35 @@ mindmg = 7
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_type_orientation(global.minigun_pt,direction,direction,0,0,false)
+            <string>event_inherited()
+part_type_orientation(global.minigun_pt,direction,direction,0,0,false)
 part_particles_create(global.minigun_sys,x,y,global.minigun_pt,1)
 if distance_to_object(obj_player)&gt;3000{instance_destroy();}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_parent_playerwall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>part_particles_create(global.minigun2_sys,phy_collision_x,phy_collision_y,global.minigun2_pt,30)
+instance_destroy();
+
 </string>
           </argument>
         </arguments>

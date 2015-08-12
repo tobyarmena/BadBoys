@@ -52,7 +52,8 @@ pdir=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//movement
+            <string>event_inherited()
+//movement
 if instance_exists(par_enemies)&amp;&amp;distance_to_object(instance_nearest(x,y,par_enemies))&lt;300 &amp;&amp; par_enemies.visible = true
     {
     scr_follow(instance_nearest(x,y,par_enemies),0,8000);
@@ -68,6 +69,31 @@ else
 part_particles_create(global.wisp_sys,x+irandom_range(-5,5),y+irandom_range(-5,5),global.wisp_pt,40)
 if distance_to_object(obj_player)&gt;3000{instance_destroy();}
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_parent_playerwall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>part_particles_create(global.wisp2_sys,phy_collision_x,phy_collision_y,global.wisp2_sys,15)
+
+instance_destroy();
 </string>
           </argument>
         </arguments>

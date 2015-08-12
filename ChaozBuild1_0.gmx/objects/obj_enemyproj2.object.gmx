@@ -52,7 +52,7 @@ image_blend = c_green
             <kind>1</kind>
             <string>phy_rotation += phy_speed
 part_particles_create(global.magma3_sys,x+irandom_range(-5,5),y+irandom_range(-5,5),global.magma3_pt,10)
-if distance_to_object(obj_enemyranged2)&gt;3000{instance_destroy();}
+
 
 </string>
           </argument>

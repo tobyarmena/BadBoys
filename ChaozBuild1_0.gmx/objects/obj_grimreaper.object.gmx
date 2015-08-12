@@ -27,9 +27,11 @@
             <kind>1</kind>
             <string>event_inherited()
 path = path_add();
-sethp = 1500*global.scale
+sethp = 700*global.scale
 hp= sethp;
 hpcheck = sethp;
+mindmg = 10*global.scale
+maxdmg = mindmg + 5
 hpmax = sethp;
 attention = false;
 timer = 1;
@@ -171,7 +173,7 @@ if state=2
         {
         if distance_to_object(obj_player)&lt;150
             {
-            lives-=15
+            lives -= scr_minmaxdmg()
             with (obj_player)
                 {
                 force=3000
@@ -225,6 +227,29 @@ if state=2
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_grimreaper">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_companion">
       <action>
         <libid>1</libid>
@@ -267,7 +292,7 @@ if state=2
             <kind>1</kind>
             <string>if attacked = false
 {
-
+lives -= scr_minmaxdmg()
 attacked = true;
 alarm[0] = 90;
 effect_create_above(ef_ring,phy_collision_x,phy_collision_y,1,c_yellow)
@@ -276,7 +301,6 @@ with(obj_player)
     ldx = lengthdir_x(900,point_direction(other.x,other.y,x,y))
     ldy = lengthdir_y(900,point_direction(other.x,other.y,x,y))
     physics_apply_impulse(x,y,ldx,ldy)
-    lives -= 10
     }
 }
 </string>
