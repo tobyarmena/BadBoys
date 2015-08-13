@@ -1,5 +1,5 @@
 acc = 8 //x and y scanned per step
-len = 1032//max length of laser 
+len = 1632//max length of laser 
 
 var ind;
 if button = mb_left

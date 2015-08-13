@@ -68,6 +68,7 @@
       <sprite>sprites\spr_slot</sprite>
       <sprite>sprites\spr_inventory</sprite>
       <sprite>sprites\spr_magma_pu</sprite>
+      <sprite>sprites\spr_boulder_pu</sprite>
       <sprite>sprites\spr_vortex_pu</sprite>
       <sprite>sprites\spr_minigun_pu</sprite>
       <sprite>sprites\spr_laser_pu</sprite>
@@ -181,6 +182,7 @@
       <script>scripts\scr_minigun.gml</script>
       <script>scripts\scr_ice.gml</script>
       <script>scripts\scr_magma.gml</script>
+      <script>scripts\scr_boulder.gml</script>
       <script>scripts\scr_wisp.gml</script>
       <script>scripts\scr_missle.gml</script>
       <script>scripts\scr_wave.gml</script>
@@ -345,6 +347,7 @@
       <object>objects\obj_wave_pu</object>
       <object>objects\obj_vortex</object>
       <object>objects\obj_laser_pu</object>
+      <object>objects\obj_boulder_pu</object>
       <object>objects\obj_killspree_pu</object>
       <object>objects\obj_skull_marked_pu</object>
       <object>objects\obj_skull_eye_pu</object>
@@ -353,15 +356,18 @@
     </objects>
     <objects name="spells">
       <object>objects\obj_magma_pro</object>
+      <object>objects\obj_boulder_pro</object>
       <object>objects\obj_ice_pro</object>
       <object>objects\obj_minigun_pro</object>
       <object>objects\obj_wisp_pro</object>
       <object>objects\obj_missle_pro</object>
+      <object>objects\obj_Leftlaser</object>
       <object>objects\obj_wave_pro</object>
       <object>objects\par_pro</object>
       <object>objects\obj_gasCan</object>
       <object>objects\obj_vortex_pro</object>
       <object>objects\obj_missle_ex</object>
+      <object>objects\obj_Rightlaser</object>
     </objects>
     <objects name="Lighting">
       <object>objects\obj_lightingControl</object>
@@ -455,8 +461,6 @@
     </objects>
     <object>objects\obj_melee</object>
     <object>objects\obj_dreamorb</object>
-    <object>objects\obj_Rightlaser</object>
-    <object>objects\obj_Leftlaser</object>
     <object>objects\obj_damagescreen</object>
     <object>objects\obj_parent_playerwall</object>
     <object>objects\obj_roomclear</object>

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///Item Lib
 
 window_set_cursor(cr_none);
 
@@ -87,7 +87,7 @@ for(i=0;i&lt;=maxInvSlots;i+=1)
     
     }
     
-//item database
+///item database
 /*
 [x,0] = Name
 [x,1] = item type (1=spell,2=skull,3=core,4=legs)
@@ -232,6 +232,13 @@ global.items[16,2] = c_red
 global.items[16,3] = "You get a rush from killing. #Killing multiple enemies in a row #gives you serious damage and speed buffs"           
 global.items[16,4] = spr_killspree_core_pu
 global.items[16,5] = scr_core_killspree
+
+global.items[17,0] = "Boulder"  
+global.items[17,1] = 1             
+global.items[17,2] = spr_boulder__arm
+global.items[17,3] = ""           
+global.items[17,4] = spr_boulder_pu
+global.items[17,5] = scr_boulder
 </string>
           </argument>
         </arguments>
