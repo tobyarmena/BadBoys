@@ -75,6 +75,11 @@ global.firstTouch = false
 originalmass=phy_mass
 originaldamp=phy_linear_damping;
 
+w = keyboard_check(ord('W'));
+a = keyboard_check(ord('A'));
+s = keyboard_check(ord('S'));
+d = keyboard_check(ord('D'));
+
 
 </string>
           </argument>
@@ -126,6 +131,12 @@ if distance_to_object(obj_doorUp)&gt;5&amp;&amp;distance_to_object(obj_doorDown)
           <argument>
             <kind>1</kind>
             <string>if global.action=1{scr_move2(spd*(1+(global.killspree-1)/3));scr_facemouse()}
+if global.action = 3
+    {
+    scr_move2(spd*(1+(global.killspree-1)/3))
+    scr_turn(pushdir,20)
+    phy_rotation = -direction
+    }
 
 if distance_to_point(mouse_x,mouse_y)&gt;30
     {
@@ -190,9 +201,26 @@ if distance_to_object(obj_doorLeft)&lt;5
     door_Left = true;
 else
     door_Left = false;
-
-//if distance_to_object(obj_vanish_ex) &lt; 300
-    //lives -= 30;
+    
+//push block
+pushblock = instance_nearest(x,y,obj_pushblock)
+if distance_to_object(pushblock)&lt;3 &amp;&amp; keyboard_check(vk_shift)
+    {
+    pushdir = point_direction(obj_player.x,obj_player.y,pushblock.x+sprite_width/2,pushblock.y+sprite_width/2)
+    if pushdir &lt; 45 || pushdir &gt; 315
+        pushdir = 0
+    if pushdir &gt;= 45 &amp;&amp; pushdir&lt; 135
+        pushdir = 90
+    if pushdir &gt;=135 &amp;&amp; pushdir &lt; 225
+        pushdir = 180
+    if pushdir &gt;=225 &amp;&amp; pushdir&lt;= 315
+        pushdir = 270
+    with(pushblock)
+        scr_applyforce(other.pushdir,10000000)
+    global.action=3
+    }
+else 
+    global.action = 1
 
 </string>
           </argument>

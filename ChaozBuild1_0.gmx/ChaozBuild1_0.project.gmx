@@ -465,6 +465,7 @@
     <object>objects\obj_parent_playerwall</object>
     <object>objects\obj_roomclear</object>
     <object>objects\obj_behindDoorWall</object>
+    <object>objects\obj_pushblock</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>

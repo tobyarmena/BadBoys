@@ -90,7 +90,7 @@ if sprite_index != global.inventory[index,2]
 if sprite_index = spr_empty{sprite_index=spr_normal_arm}
 
 //Perform attack actions when the player state is in free mode
-if global.action = 1
+if global.action = 1||3
     {
     
     //Point arms to crosshairs when shift is held down
@@ -176,7 +176,7 @@ if global.action = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.action = 1
+            <string>if global.action = 1||3
 {
 x = obj_player.x+lengthdir_x(34,obj_player.direction+90*dir)+lengthdir_x(16+knockback,obj_player.direction);
 y = obj_player.y+lengthdir_y(34,obj_player.direction+90*dir)+lengthdir_y(16+knockback,obj_player.direction);
