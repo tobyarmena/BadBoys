@@ -266,6 +266,7 @@
     </scripts>
     <script>scripts\scr_menus.gml</script>
     <script>scripts\scr_minmaxdmg.gml</script>
+    <script>scripts\lib_price.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_harrington</font>
