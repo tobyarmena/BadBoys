@@ -177,17 +177,39 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Spells">
-      <script>scripts\scr_minigun.gml</script>
-      <script>scripts\scr_ice.gml</script>
-      <script>scripts\scr_magma.gml</script>
-      <script>scripts\scr_wisp.gml</script>
-      <script>scripts\scr_missle.gml</script>
-      <script>scripts\scr_wave.gml</script>
-      <script>scripts\scr_scythe.gml</script>
-      <script>scripts\scr_gas.gml</script>
-      <script>scripts\scr_vortex.gml</script>
-      <script>scripts\scr_laser.gml</script>
+    <scripts name="Player">
+      <scripts name="Core">
+        <script>scripts\scr_core_killspree.gml</script>
+      </scripts>
+      <scripts name="Feet">
+        <script>scripts\scr_windwalk.gml</script>
+        <script>scripts\scr_dash.gml</script>
+      </scripts>
+      <scripts name="Spells">
+        <script>scripts\scr_minigun.gml</script>
+        <script>scripts\scr_ice.gml</script>
+        <script>scripts\scr_magma.gml</script>
+        <script>scripts\scr_wisp.gml</script>
+        <script>scripts\scr_missle.gml</script>
+        <script>scripts\scr_wave.gml</script>
+        <script>scripts\scr_scythe.gml</script>
+        <script>scripts\scr_gas.gml</script>
+        <script>scripts\scr_vortex.gml</script>
+        <script>scripts\scr_laser.gml</script>
+      </scripts>
+      <scripts name="Skulls">
+        <script>scripts\scr_skull_hell.gml</script>
+        <script>scripts\scr_skull_eye.gml</script>
+        <script>scripts\scr_skull_broken.gml</script>
+        <script>scripts\scr_skull_marked.gml</script>
+        <script>scripts\scr_empty.gml</script>
+      </scripts>
+      <script>scripts\scr_select.gml</script>
+      <script>scripts\scr_turn_legs.gml</script>
+      <script>scripts\scr_move.gml</script>
+      <script>scripts\scr_item_pickup.gml</script>
+      <script>scripts\scr_move2.gml</script>
+      <script>scripts\scr_facemouse.gml</script>
     </scripts>
     <scripts name="lighting">
       <script>scripts\lsys_init.gml</script>
@@ -219,6 +241,7 @@
       <script>scripts\scr_enemyshoot2.gml</script>
       <script>scripts\scr_enemyshoot3.gml</script>
       <script>scripts\scr_turn.gml</script>
+      <script>scripts\scr_variant.gml</script>
     </scripts>
     <scripts name="Dungeon">
       <script>scripts\scr_dungeonGen.gml</script>
@@ -228,20 +251,9 @@
       <script>scripts\scr_resizegrid.gml</script>
       <script>scripts\scr_checkdoor.gml</script>
     </scripts>
-    <scripts name="Skulls">
-      <script>scripts\scr_skull_hell.gml</script>
-      <script>scripts\scr_skull_eye.gml</script>
-      <script>scripts\scr_skull_broken.gml</script>
-      <script>scripts\scr_skull_marked.gml</script>
-      <script>scripts\scr_empty.gml</script>
-    </scripts>
-    <scripts name="Player">
-      <script>scripts\scr_select.gml</script>
-      <script>scripts\scr_turn_legs.gml</script>
-      <script>scripts\scr_move.gml</script>
-      <script>scripts\scr_item_pickup.gml</script>
-      <script>scripts\scr_move2.gml</script>
-      <script>scripts\scr_facemouse.gml</script>
+    <scripts name="Companion AI">
+      <script>scripts\scr_follow2.gml</script>
+      <script>scripts\scr_follow2_attack.gml</script>
     </scripts>
     <script>scripts\scr_deal_damage.gml</script>
     <script>scripts\scr_pause.gml</script>
@@ -250,18 +262,11 @@
     <script>scripts\scr_fade.gml</script>
     <script>scripts\scr_angleDiff.gml</script>
     <script>scripts\scr_droporbs.gml</script>
-    <script>scripts\scr_dash.gml</script>
     <script>scripts\scr_spritetoparticle.gml</script>
-    <script>scripts\scr_windwalk.gml</script>
-    <script>scripts\scr_core_killspree.gml</script>
     <script>scripts\scr_calculatedamage.gml</script>
     <script>scripts\scr_applyforce.gml</script>
     <script>scripts\scr_applyimpulse.gml</script>
     <script>scripts\scr_moveto.gml</script>
-    <scripts name="Companion AI">
-      <script>scripts\scr_follow2.gml</script>
-      <script>scripts\scr_follow2_attack.gml</script>
-    </scripts>
     <script>scripts\scr_menus.gml</script>
     <script>scripts\scr_minmaxdmg.gml</script>
   </scripts>

@@ -43,8 +43,92 @@ failsafe=0
 value=4;
 vanish = false;
 fire = 0;
+damage = 0;
+toxic = false;
 
 event_inherited()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if toxic = true
+    {
+    with (obj_player)
+        {
+        lives -= 2;   
+    }
+    if damage &lt;= 3 
+        {
+         alarm[5] = 5;
+         damage += 1
+    }
+    else 
+        toxic = false;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(x,y,obj_vanish_ex);
 </string>
           </argument>
         </arguments>
@@ -119,29 +203,7 @@ alarm[0] = 90;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>variant = irandom_range(0,4)
-if variant = 0
-    {
-    scr_enemyshoot(obj_enemyproj4);
-}
-if variant = 1
-    {
-    fire = 0;
-    alarm[3] = 1;
-}
-if variant = 2
-    {
-    scr_enemyshoot2(5000,obj_enemyproj4);
-}
-if variant = 3
-    {
-    instance_create(x,y,obj_vanish_ex);
-}
-if variant = 4
-    {
-    scr_enemyshoot3(1000,obj_enemyproj4);
-}
-
+            <string>scr_variant();
 </string>
           </argument>
         </arguments>
@@ -227,8 +289,16 @@ if attention = true
         
         if !alarm[2] 
             {
-            alarm[1] = 22 //shoot
-            alarm[2] = 45//vanish
+            if hpmax &lt;= 1/2 * hpmax
+                {
+                alarm[1] = 25 //shoot
+                alarm[2] = 50//vanish
+            }
+            else
+                {
+                alarm[1] = 20 //shoot
+                alarm[2] = 40//vanish
+            }
         }
     }
 }
