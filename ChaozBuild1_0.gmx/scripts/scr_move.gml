@@ -1,5 +1,5 @@
 //variables
-var w, a, s, d, mouse_direction,move_speed;
+var mouse_direction,move_speed;
 
 //setables
 move_speed = argument0
